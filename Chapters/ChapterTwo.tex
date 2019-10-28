@@ -189,12 +189,25 @@ A partir da primeira Revolução Industrial, houve o advento do uso de máquinas
 
 \cite{siciliano2010} conceitua que robôs são máquinas que podem substituir humanos em, desde tarefas de esforço físico a, até, tomada de decisões. Atualmente podem ser encontradas máquinas com inteligência artificial que se adequam e tomam decisões a partir de fatores externos, como o ASIMO (Advanced Step in Innovative Mobility) da Honda, que pode ser visto na Figura 01. O primeiro sistema robótico a existir foi o UNIMATE, da UNIMATION Inc.; quando foi instalado na fábrica da General Motors em Nova Jersey na década de 1950, o UNIMATE era utilizado para elevar peças de metais quentes.
 
-FIGURA 1
+\begin{figure}[h!]												
+	\centering												
+	\includegraphics[width=0.8\textwidth]{figura1refbot.png}			
+	\caption{ASIMO}		
+	\label{img:denavit}	
+	\source{HONDA}		
+\end{figure}
+
 
 O uso de robôs industriais como o UNIMATE tem como principal reflexo a automatização da produção, aumentando, portanto, a quantidade de produtos gerados em dado período de tempo. Outro fator que pode ser relacionado ao uso de robôs em linha de produção é a melhora nas condições de trabalho do ser humano, por meio da redução de atividades perigosas ou insalubres \cite{bouteille}.
 O controle de sistemas robóticos, com o passar dos anos, vem se tornando mais complexo e especializado, porém pode ser simplificado para um controle de malha fechada, que pode ser visto na Figura 02.
 
-FIGURA 2
+\begin{figure}[h!]												
+	\centering												
+	\includegraphics[width=1.0\textwidth]{figura2refbot.png}			
+	\caption{Componentes e controle de robôs}		
+	\label{img:denavit}	
+	\source{\cite{siciliano2010}}		
+\end{figure}
 
 Percebe-se, a partir da Figura 02 que, em sistemas robóticos, existem atuadores e sensores. Atuadores podem ser citados como sistemas que possuem a capacidade de exercer atuação mecânica para o robô, como o exemplo dos servo-motores. Sensores são transmissores que recebem determinado dado e emitem sinais analógicos ou digitais para o computador central, possibilitando o controle de um sistema robótico. 
 
@@ -203,10 +216,10 @@ Percebe-se, a partir da Figura 02 que, em sistemas robóticos, existem atuadores
 
 
 \subsection{Percepção}\label{sec:perception}
-Segundo Lent (2010), para a neurociência, a percepção refere-se à capacidade de associar automaticamente as informações sensoriais à memória e à cognição de tal maneira a gerar conceitos sobre o mundo e orientar os comportamentos. Comparativamente, o robô associa os dados “sensoriais” obtidos através dos sensores aos controladores para que possam ser processados e interpretados, dando assim, a capacidade de percepção aos robôs. 
+Segundo \cite{lent}, para a neurociência, a percepção refere-se à capacidade de associar automaticamente as informações sensoriais à memória e à cognição de tal maneira a gerar conceitos sobre o mundo e orientar os comportamentos. Comparativamente, o robô associa os dados “sensoriais” obtidos através dos sensores aos controladores para que possam ser processados e interpretados, dando assim, a capacidade de percepção aos robôs. 
 Atualmente, existem diversos sensores que são utilizados, dentre eles: LIDAR, câmeras, IMU, sensores de temperatura, umidade etc. A capacidade de conectar uma ação a partir da percepção de mundo é tarefa do controle, o qual pode emitir comandos de execução para os atuadores a partir das leituras dos sensores. Um exemplo prático disso é o ser humano: quando uma pessoa bate o dedinho do pé, instantaneamente, as terminações nervosas (sensores) emitirão sinais ao cérebro (controle), que por sua vez, emitirá um sinal para os músculos (atuadores) se moverem a fim de interromper a sensação dolorosa.    
 
-A visão computacional é a tentativa de simular a visão biológica, o que se torna em um assunto extremamente complexo. Jahne (2000) escreve que pode-se comparar as funcionalidades básicas dos dois tipo de visão, que são:
+A visão computacional é a tentativa de simular a visão biológica, o que se torna em um assunto extremamente complexo. \cite{jahne} escreve que pode-se comparar as funcionalidades básicas dos dois tipo de visão, que são:
 
 \begin{itemize}
 	\item Fonte de radiação: sem a emissão de radiação nada pode ser observado ou processado;
@@ -221,12 +234,18 @@ A visão computacional é a tentativa de simular a visão biológica, o que se t
 \end{itemize}
 
 Após esclarecidas as principais funções básicas da visão, também é necessário entender que a visão computacional não é somente o processamento de imagens. O processamento de imagens recebe uma imagem como entrada, e como saída tem-se um conjunto de valores numéricos que podem ou não formar outra imagem. Já a visão computacional é a busca de simular a visão humana, em que a entrada é uma imagem, e a saída é a interpretação dela. 
-Gonzalez et al. (2008) escrevem que não existe uma fronteira bem definida entre o processamento de imagens e a visão computacional. Porém é possível dividir o caminho entre o processamento de imagem e a visão computacional em três partes: nível baixo, nível médio e nível alto. O nível baixo é de processos primitivos, como pré-processamento de imagem para redução de ruídos, aprimoramento de contraste e nitidez da imagem. Já o nível médio é caracterizado por processos que têm como entrada imagens, mas a saída do processamento são atributos extraídos da imagem, como arestas, contornos e identificação de objetos. O nível alto trata-se dos processos que interpretam um conjunto de objetos reconhecidos na imagem, desta maneira, realizando funções cognitivas que geralmente são associadas à visão biológica.
+\cite{gonzalez} escrevem que não existe uma fronteira bem definida entre o processamento de imagens e a visão computacional. Porém é possível dividir o caminho entre o processamento de imagem e a visão computacional em três partes: nível baixo, nível médio e nível alto. O nível baixo é de processos primitivos, como pré-processamento de imagem para redução de ruídos, aprimoramento de contraste e nitidez da imagem. Já o nível médio é caracterizado por processos que têm como entrada imagens, mas a saída do processamento são atributos extraídos da imagem, como arestas, contornos e identificação de objetos. O nível alto trata-se dos processos que interpretam um conjunto de objetos reconhecidos na imagem, desta maneira, realizando funções cognitivas que geralmente são associadas à visão biológica.
 As aplicações da visão computacional são bastante amplas, e pode ser usada desde para o aumento da produtividade de uma linha de produção através da rápida inspeção, até para que robôs possam compreender seus arredores. Um bom exemplo da utilização da visão computacional é nos veículos autônomos, em câmeras, como podem ser vistos na Figura 03, são utilizadas em conjunto com outros tipos de sensores para possibilitar que o automóvel utilize o piloto automático. 
 
-FIGURA 3
+\begin{figure}[h!]												
+	\centering												
+	\includegraphics[width=1.0\textwidth]{figura3refbot.png}			
+	\caption{Visão da câmera - Piloto automático}		
+	\label{img:denavit}	
+	\source{Tesla}		
+\end{figure}
 
-Para que um robô móvel seja autônomo, deve ser capaz de perceber o ambiente à sua volta para que assim possa decidir sobre qual a melhor ação a ser tomada e realizá-la com o menor erro possível. Desta maneira, um das funções fundamentais do robô a fim de alcançar seu objetivo, tanto em ambientes externos quanto em ambientes internos, é a aquisição de informações do ambiente em que está localizado através da construção de mapas do local. Segundo Murphy (2000) os mapas utilizados para navegação dos robôs podem ser classificados, de acordo com sua estrutura, em dois tipos:
+Para que um robô móvel seja autônomo, deve ser capaz de perceber o ambiente à sua volta para que assim possa decidir sobre qual a melhor ação a ser tomada e realizá-la com o menor erro possível. Desta maneira, um das funções fundamentais do robô a fim de alcançar seu objetivo, tanto em ambientes externos quanto em ambientes internos, é a aquisição de informações do ambiente em que está localizado através da construção de mapas do local. Segundo \cite{murphy} os mapas utilizados para navegação dos robôs podem ser classificados, de acordo com sua estrutura, em dois tipos:
 
 \begin{itemize}
 	\item Topológicos: modelo que representa o ambiente por meio de conexão entre pontos de referência. A representação pode ser feita por meio de grafos onde os vértices representam os locais e as arestas representam o caminho entre os locais. Porém esse tipo de representação é pobre em detalhes do ambiente físico;
@@ -235,7 +254,7 @@ Para que um robô móvel seja autônomo, deve ser capaz de perceber o ambiente �
 \end{itemize}
 
 \subsection{Áreas de Atuação}\label{sec:atuation}
-Com a união dos sensores, atuadores e um controle lógico, o ser humano tem a possibilidade de criar robôs para uma infinidade de áreas de atuações. Siciliano (2016) descreve algumas das possíveis áreas em que a robótica pode atuar, como por exemplo:
+Com a união dos sensores, atuadores e um controle lógico, o ser humano tem a possibilidade de criar robôs para uma infinidade de áreas de atuações. \cite{siciliano2016} descreve algumas das possíveis áreas em que a robótica pode atuar, como por exemplo:
 
 \begin{itemize}
 	\item Industrial;
@@ -261,8 +280,8 @@ Na área industrial, como visto anteriormente, foi o pontapé para o desenvolvim
 	\item Usinagem: utilizado devido a sua grande precisão, podem ser utilizado nos mais diversos campos da usinagem bastando apenas providenciar a ferramenta adequada.
 \end{itemize}
 
-“Os oceanos cobrem cerca de 2/3 da superfície da terra e tem sido crítico para o bem-estar dos seres humanos por toda a história. Atualmente, os mares são uma importante fonte de alimento e outros recursos, como petróleo e gás.” (SICILIANO, 2016). Como destacado pelo autor, os mares e oceanos são peças fundamentais para o desenvolvimento humano ao longo do tempo. No início da exploração subaquática o ser humano contava apenas com mergulhos e veículos submersíveis tripulados. Porém existe a necessidade de explorar regiões que expõem a segurança dos seres humanos, e por conta desta necessidade foram desenvolvidos robôs, seja autônomos ou remotamente operados,  para que assim fosse possível suprir tais necessidades. Atualmente os robôs subaquáticos atuam em três áreas: comercial, científica e militar. Dentre as áreas de atuação, as atividades mais praticadas são a inspeção (equipamentos, tubulações, terreno), instalação e manutenção (equipamentos e tubulações), pesquisa e coleta de objetos.
-O grande índice de fatalidades com aeronaves operadas por seres humanos levou os engenheiros a desenvolver máquinas voadoras capazes de ser operadas sem a presença de humanos (SICILIANO, 2016). Com isto os robôs têm grande papel no desenvolvimento de aeronaves não tripuladas. Algumas das aplicações dos robôs nesta área são:
+“Os oceanos cobrem cerca de 2/3 da superfície da terra e tem sido crítico para o bem-estar dos seres humanos por toda a história. Atualmente, os mares são uma importante fonte de alimento e outros recursos, como petróleo e gás.” \cite{siciliano2016}. Como destacado pelo autor, os mares e oceanos são peças fundamentais para o desenvolvimento humano ao longo do tempo. No início da exploração subaquática o ser humano contava apenas com mergulhos e veículos submersíveis tripulados. Porém existe a necessidade de explorar regiões que expõem a segurança dos seres humanos, e por conta desta necessidade foram desenvolvidos robôs, seja autônomos ou remotamente operados,  para que assim fosse possível suprir tais necessidades. Atualmente os robôs subaquáticos atuam em três áreas: comercial, científica e militar. Dentre as áreas de atuação, as atividades mais praticadas são a inspeção (equipamentos, tubulações, terreno), instalação e manutenção (equipamentos e tubulações), pesquisa e coleta de objetos.
+O grande índice de fatalidades com aeronaves operadas por seres humanos levou os engenheiros a desenvolver máquinas voadoras capazes de ser operadas sem a presença de humanos \cite{siciliano2016}. Com isto os robôs têm grande papel no desenvolvimento de aeronaves não tripuladas. Algumas das aplicações dos robôs nesta área são:
 
 \begin{itemize}
 	\item Observação aérea: podem ser usados tanto para uso civil quanto para militar, podem fazer as seguintes ações: mapeamento de terreno, pesquisas ambientais, monitoramento de plantações, filmagens, identificação de alvos;
@@ -270,7 +289,7 @@ O grande índice de fatalidades com aeronaves operadas por seres humanos levou o
 	\item Entrega de carga: utilizados para entrega de carga em locais de difícil acesso às pessoas. Muito utilizados também para fazer a aplicação de agrotóxicos em plantações. Utilizado também pelo os militares para a entrega de mísseis. 
 \end{itemize}
 
-Os robôs são excelentes soluções para o ambiente extremamente perigoso que é o espaço. Segundo a NASA (2017), os robôs são utilizados por diversos motivos, o mais importante deles é a segurança para os seres humanos, uma vez que robô podem ser dispensados. Outro motivo é o custo, enviar robôs para o espaço é mais barato que enviar humanos, pois eles não têm as necessidades que os seres humanos têm. Segundo ESA (2014) os robôs espaciais tem duas principais aplicações: 
+Os robôs são excelentes soluções para o ambiente extremamente perigoso que é o espaço. Segundo a \cite{nasa_2017}, os robôs são utilizados por diversos motivos, o mais importante deles é a segurança para os seres humanos, uma vez que robô podem ser dispensados. Outro motivo é o custo, enviar robôs para o espaço é mais barato que enviar humanos, pois eles não têm as necessidades que os seres humanos têm. Segundo \cite{esa_2014} os robôs espaciais tem duas principais aplicações: 
 
 \begin{itemize}
 	\item Orbital: usado basicamente para a construção, operação e manutenção da Estação Espacial Internacional (ISS) ou de satélites que orbitam o planeta, através de braços robóticos;
@@ -278,7 +297,7 @@ Os robôs são excelentes soluções para o ambiente extremamente perigoso que �
 	\item Exploração planetária: viagens longas e perigosas impulsionaram o desenvolvimento de robôs capazes de vasculharem a superfície de planetas ou corpos celestes. Existem uma variedade de robôs com este propósito, como por exemplo rovers e hoppers, penetrômetros e toupeira robótica, balões, dirigíveis e aviões. 
 \end{itemize}
 
-Na educação, os robôs acabam sendo poderosas ferramentas de aprendizado, cada vez mais inseridos no mercado. Siciliano (2016) escreve que os robôs, no contexto educacional, possuem três papéis principais. O primeiro é o robô como um projeto de linguagem de programação, que se utiliza um exemplo contextualizado para motivar os estudantes se aprofundarem no assunto. O segundo papel é o robô como foco de aprendizado, em que se utiliza um robô físico para ensinar os mais diversos assuntos técnicos durante a construção de um robô. O terceiro e último papel é o robô como colaborador de aprendizado, em que o estudante não está projetando um robô, mas tendo um robô de alto nível como companheiro de aprendizado. Com esses papéis, a robótica consegue desenvolver o estudante em alguns pontos: 
+Na educação, os robôs acabam sendo poderosas ferramentas de aprendizado, cada vez mais inseridos no mercado. \cite{siciliano2016} escreve que os robôs, no contexto educacional, possuem três papéis principais. O primeiro é o robô como um projeto de linguagem de programação, que se utiliza um exemplo contextualizado para motivar os estudantes se aprofundarem no assunto. O segundo papel é o robô como foco de aprendizado, em que se utiliza um robô físico para ensinar os mais diversos assuntos técnicos durante a construção de um robô. O terceiro e último papel é o robô como colaborador de aprendizado, em que o estudante não está projetando um robô, mas tendo um robô de alto nível como companheiro de aprendizado. Com esses papéis, a robótica consegue desenvolver o estudante em alguns pontos: 
 
 \begin{itemize}
 	\item No interesse na ciência e engenharia;
@@ -289,11 +308,4 @@ Na educação, os robôs acabam sendo poderosas ferramentas de aprendizado, cada
 \end{itemize}
 
 
-\begin{figure}[h!]												
-	\centering												
-	\includegraphics[width=0.5\textwidth]{denavit.PNG}			
-	\caption{Parâmetros de Denavit-Hartenberg}		
-	\label{img:denavit}	
-	\source{\cite{romanorobotica}}		
-\end{figure}
 
