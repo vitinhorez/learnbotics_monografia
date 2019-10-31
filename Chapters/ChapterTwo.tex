@@ -231,8 +231,6 @@ Após esclarecidas as principais funções básicas da visão, também é necess
 
 \cite{gonzalez} escrevem que não existe uma fronteira bem definida entre o processamento de imagens e a visão computacional. Porém é possível dividir o caminho entre o processamento de imagem e a visão computacional em três partes: nível baixo, nível médio e nível alto. O nível baixo é de processos primitivos, como pré-processamento de imagem para redução de ruídos, aprimoramento de contraste e nitidez da imagem. Já o nível médio é caracterizado por processos que têm como entrada imagens, mas a saída do processamento são atributos extraídos da imagem, como arestas, contornos e identificação de objetos. O nível alto trata-se dos processos que interpretam um conjunto de objetos reconhecidos na imagem, desta maneira, realizando funções cognitivas que geralmente são associadas à visão biológica.
 
-As aplicações da visão computacional são bastante amplas, e pode ser usada desde para o aumento da produtividade de uma linha de produção através da rápida inspeção, até para que robôs possam compreender seus arredores. Um bom exemplo da utilização da visão computacional é nos veículos autônomos, em câmeras, como podem ser vistos na Figura 03, são utilizadas em conjunto com outros tipos de sensores para possibilitar que o automóvel utilize o piloto automático. 
-
 \begin{figure}[h!]												
 	\centering												
 	\includegraphics[width=1.0\textwidth]{figura3refbot.png}			
@@ -241,12 +239,35 @@ As aplicações da visão computacional são bastante amplas, e pode ser usada d
 	\source{Tesla}		
 \end{figure}
 
+As aplicações da visão computacional são bastante amplas, e pode ser usada desde para o aumento da produtividade de uma linha de produção através da rápida inspeção, até para que robôs possam compreender seus arredores. Um bom exemplo da utilização da visão computacional é nos veículos autônomos, em câmeras, como podem ser vistos na Figura 2.3, são utilizadas em conjunto com outros tipos de sensores para possibilitar que o automóvel utilize o piloto automático. 
+
+
+
 Para que um robô móvel seja autônomo, deve ser capaz de perceber o ambiente à sua volta para que assim possa decidir sobre qual a melhor ação a ser tomada e realizá-la com o menor erro possível. Desta maneira, um das funções fundamentais do robô a fim de alcançar seu objetivo, tanto em ambientes externos quanto em ambientes internos, é a aquisição de informações do ambiente em que está localizado através da construção de mapas do local. Segundo \cite{murphy} os mapas utilizados para navegação dos robôs podem ser classificados, de acordo com sua estrutura, em dois tipos:
 
 \begin{itemize}
 	\item Topológicos: modelo que representa o ambiente por meio de conexão entre pontos de referência. A representação pode ser feita por meio de grafos onde os vértices representam os locais e as arestas representam o caminho entre os locais. Porém esse tipo de representação é pobre em detalhes do ambiente físico;
 	
+	\begin{figure}[h!]												
+		\centering												
+		\includegraphics[width=0.6\textwidth]{figura4refbot.png}			
+		\caption{Mapa topológico de um layout de escritório
+		}		
+		\label{img:denavit}	
+		\source{\cite{murphy}}		
+	\end{figure}
+	
 	\item Métricos: modelo que representa o ambiente físico em detalhes. A representação do ambiente é normalmente feita através de um plano dividido em células de tamanhos iguais, que também é chamada de grade. Desta maneira, cada célula representa uma parte do espaço físico.
+	
+	\begin{figure}[h!]												
+		\centering												
+		\includegraphics[width=0.7\textwidth]{figura5refbot.png}			
+		\caption{Grade regular
+		}		
+		\label{img:denavit}	
+		\source{\cite{murphy}}		
+	\end{figure}
+	
 \end{itemize}
 
 \subsection{Áreas de Atuação}\label{sec:atuation}
