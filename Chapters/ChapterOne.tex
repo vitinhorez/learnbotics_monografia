@@ -1,70 +1,50 @@
 \chapter{Introdução}
 \label{chap:intro}
 \begin{flushright}
-	"Faça ou não faça, tentativa não há." \\
+	"O saber que não vem da experiência, não é realmente saber." \\
 	\ \\
-	(Mestre Yoda)
+	(Lev Vygotsky)
 \end{flushright}
 
-\cite{Autor1998}
-O Brasil apresenta uma matriz energética diferente da do resto do mundo, onde as fontes renováveis representam uma grande parte da geração da energia. Segundo a \cite{epe_site}, em 2016, a matriz energética mundial contava com somente 14,1\% da matriz energética constituída por fontes renováveis, enquanto o brasil já apresentava 82\% da sua matriz vinda de fontes renováveis, onde a geração hidrelétrica corresponde a 70\% dessa geração.
+Quando se ouve falar em robôs, logo associa-se a algo de extrema complexidade. Isso ocorre, sumariamente, devido à falta de informações simplificadas sobre o tema, ou devido a dificuldade de acesso a tais conteúdos. A palavra robótica é derivada da palavra robô, que, segundo \cite{goncalves2007}, é um dispositivo eletromecânico capaz de realizar tarefas de maneira autônoma ou pré-programada, e faz menção a ciência que estuda, cria e aplica robôs. 
+No meio educacional, a palavra didática está presente de forma quase que impreterível, afinal, materiais didáticos, livros, projetos e a própria didática como um instrumento qualificador do professor, são componentes fundamentais do cotidiano educacional.
 
-A expectativa é de que a energia hidrelétrica continue sendo cada vez mais utilizada no país, devido ao crescimento previsto da demanda energética brasileira, onde segundo o \cite{atlas_aneel} o consumo atual é de 405 TWh e a demanda esperada em 2030 é de 950 e 1.250 TWh/ano \cite{bronzatti_matrizes}. Mesmo com a grande participação da geração hidrelétrica , somente 23\% dos 260 GW totais de potencial hidrelétrico são aproveitados \cite{atlas_aneel}.
+Porém, é notório que barreiras na educação da atualidade estão sendo quebradas. Já se vê espaços de ensino, como por exemplo o citado por \cite{Mataric}, onde o estudante passa a frequentar menos as salas de aula e se engaja mais em projetos, tornando assim o professor apenas um facilitador do aprendizado do aluno, um tutor. A tutoria é um método muito utilizado para efetivar uma interação pedagógica. Um exemplo disso, é que segundo \cite{sa1998}, na educação à distância, o tutor recebe o significado de "orientador de aprendizagem do aluno solitário e isolado".
 
-A concentração de demanda energética no Brasil está concentrada principalmente na região Sudeste devido a densidade populacional e elevada industrialização, isso faz com que dois terços do total da  capacidade instalada estejam localizadas na Bacia do Rio Paraná  que é a bacia mais pŕoxima da região, enquanto as bacias com potencial menos aproveitado são as localizadas no norte e nordeste do país \cite{atlas_aneel}.
+O sistema de tutoria torna mais fácil o acesso do aluno ao conhecimento, pois o professor passa a ser apenas um orientador, desta maneira o aluno tende a tornar-se independente na busca das informações. Percebendo essa nova dinâmica da educação, e a falta de informações simplificadas sobre robótica, notou-se a possibilidade de criar um kit didático, para incentivar as pessoas através de desafios e simplificar as informações em torno da robótica.
 
-Com desenvolvimento do país é esperado um aumento na demanda de energia elétrica e consequentemente um aumento na geração de energia hidrelétrica, isso faz com que seja esperado um crescimento considerável na quantidade das linhas de transmissão, de acordo com \cite{MME}, em setembro de 2018 o sistema elétrico brasileiro já atingiu 144.828 km de linhas de transmissão.  Esse aumento na quantidade de linhas tende a ser amplificado pela tendência à exploração da geração de energia na região Norte, assim sendo necessário a construção de novas linhas para distribuir essa energia para as outras partes do País.
+Ultimamente, segundo o resumo executivo World Robotics 2018 Robôs Industriais da International Federation of Robotics\cite{ifr2018}, houve uma crescente utilização de sistemas robóticos e autônomos na nossa sociedade. A demanda global de robôs tem crescido severamente, com estimativa de acréscimo de 14\% ao ano até 2021, como visto na figura~\ref{fig:just_1}.
 
-Quanto mais linhas de transmissão e maiores distâncias entre os centros geradores, maiores tendem a ser as perdas. Isso faz com que seja necessária um controle da qualidade dessa transmissão, o que se dá por meio de inspeções. A estrutura já existente apresenta precariedade em alguns aspectos, onde segundo \cite{rangel2009sistema} “no Brasil, há uma quantidade considerável de linhas de transmissão que já ultrapassou os 40 anos de idade. Com o envelhecimento das linhas de transmissão, a manutenção preventiva é um fator de extrema relevância para garantir o perfeito funcionamento dos sistemas.”
-A necessidade da constante manutenção e a alta periculosidade que os operadores são expostos faz com novas alternativas e tecnologias sejam aplicadas para a manutenção, o uso de Drones pilotados remotamente, com câmeras e sensores já é uma realidade em alguns países do mundo. O desenvolvimento de um robô próprio para inspeção de linha configura uma dessas novas alternativas, e possibilita uma expansão dos horizontes para as tecnologias aplicadas.
-%--------- NEW SECTION ----------------------
-\section{Objetivos}
-\label{sec:obj}
-O objetivo do trabalho é implementar o sistema de movimentação do robô ELIR (\textit{Electrical Line Inspection Robot}). Onde esse sistema é complementar aos outros existentes no robô, onde o conjunto dessas soluções busca fundamentar a implementação de uma Inspeção autônoma da linha.
+\begin{figure}[h!]										\caption{Estimativa anual de produção global de robôs até o ano de 2021} \label{fig:just_1}		
+	\centering										
+	\includegraphics[width=0.5\textwidth]{just_1.PNG}
+	\source{\cite{ifr2018}}		
+\end{figure}
 
+\begin{figure}[h!]										\caption{Demanda global de robôs em cada setor da indústria no período 2015-2017} \label{fig:just_2}		
+	\centering										
+	\includegraphics[width=0.5\textwidth]{just_2.PNG}
+	\source{\cite{ifr2018}}		
+\end{figure}
 
-\subsection{Objetivos Específicos}
-\label{ssec:objesp}
-Para o desenvolvimento do sistema é necessário realizar o estudo da movimentação, gestão de energia, controle e elaboração de trajetória para sistemas robóticos. A operação na linha faz com que seja necessário a gestão de energia do robô, assim como a integração com os outros subsistemas já desenvolvidos. De forma a garantir a operação na linha, os dispositivos e ferramentas utilizadas devem estar integradas no ROS (\textit{Robot Operating System}), onde é necessário também a integração com outros pacotes já desenvolvidos para o Robô.
+Esse aumento na demanda está presente em todas as áreas da indústria, como mostrado na figura ~\ref{fig:just_2}, com maior relevâncias nos setores eletroeletrônico e automotivo, de onde vêm as maiores expectativas de inovação por parte da população.
+ 
+Um exemplo de tecnologia que está sendo desenvolvida nessa área, e que é uma das mais esperadas pelo público, são os carros autônomos, que prometem, além da condução independente, maior segurança para os passageiros e tomadas de decisões importantes como a escolha de rotas e ações para evitar acidentes.
 
-%--------- NEW SECTION ----------------------
-\section{Justificativa}
-\label{sec:justi}
- Tendo em vista a crescente demanda de energia elétrica do país bem como a previsão , a necessidade de um processo confiável de transmissão se torna amplamente necessário, afinal, diversas unidades consumidoras são alimentadas diariamente, além de instalações que exercem atividades críticas, como hospitais. As unidades geradoras de energia elétrica se encontram em regiões distantes de seus consumidores finais, portanto se faz necessário a utilização de linhas de transmissão de energia elétrica. 
- 
- Uma linha de transmissão é uma linha composta por cabos condutores de energia elétrica, utilizada para a transmissão de energia em alta tensão, saindo da origem geradora e indo até às cargas consumidoras.
- 
- A garantia da distribuição em condições favoráveis se dá pela confiabilidade das linhas de transmissão e os procedimentos de manutenção aplicados à elas, para isso, é realizada constantemente a rotina de inspeção nas linhas. A rotina de inspeção, se dá através da análise da integridade da estrutura das torres, a condição em que se encontram os isoladoras e as conexões das linhas de transmissão, uma vez que o tempo e a exposição a umidade e ao sol, além de diversos eventos climáticos, fazem com diversas falhas referentes ao desgaste do material venham a aparecer. 
- 
- Estas análises têm como principal objetivo a detecção de eventuais pontos de ruptura. Outro meio para a localização dos eventuais pontos de ruptura se dá pelo uso de câmeras térmicas, onde existe o aumento da temperatura pontual devido à elevação na resistência elétrica. 
- 
- \begin{figure}[h!]												
- 	\centering												
- 	\includegraphics[width=0.5\textwidth]{Estrutura_linha.png}			
- 	\caption{Instalação típica de uma linha de transmissão}		
- 	\label{img:Estrutura_Linha}	
- 	\source{\cite{rangel2009sistema}}		
- \end{figure}
- 
- Segundo \cite{rangel2009sistema}, as rotinas de inspeção de linhas de transmissão se dão principalmente por dois métodos: inspeções por aeronaves e inspeções terrestres.
- A inspeção realizada por aeronaves, se dá tipicamente com o uso de helicópteros, que executam voos em baixa altitude, extremamente próximos das linhas de transmissão. 
- 
- Em alguns casos as condições climáticas podem dificultar o procedimento de inspeção e controle da aeronave, além do risco inerente da atividade para os tripulantes, principalmente devido ao fato de que as aeronaves tipicamente operam na região de “homem-morto”, uma zona de altura que representa perigo para os operadores a bordo das aeronaves em caso de uma queda.
- 
-  \begin{figure}[h!]												
-  	\centering												
-  	\includegraphics[width=0.5\textwidth]{Inspecao_metodos.png}			
-  	\caption{Inspeção em linhas de transmissão por veículos aéreos tripulados.}		
-  	\label{img:Inspecao_metodos}	
-  	\source{\cite{rangel2009sistema}}		
-  \end{figure}
- 
- A inspeção por vias terrestres possui uma grande dificuldade devido à dependência do terreno do local, o qual pode ser de difícil acesso devido às características geográficas.Diversos fatores tornam a inspeção de linhas de transmissão um procedimento não só perigoso, mas também altamente custoso. 
- 
- Segundo \cite{cinematicajuliana} as principais desvantagens dos meios convencionais de inspeção de linhas de transmissão são os riscos de acidentes, devido a periculosidade do procedimento de inspeção; o alto custo, uma vez que é necessário a locação e deslocamento de equipamentos específicos para o transporte e inspeção das linhas de transmissão; a alta dependência das condições climáticas e geográficas, uma vez que se torna muito difícil realizar rotinas de inspeção em tempos chuvosos ou em locais de difícil acesso.
- 
- Outra grande desvantagem dos procedimentos de inspeção definida por \cite{cinematicajuliana} é justamente a necessidade de uma mão de obra qualificada para realização destes procedimentos. Se estes procedimentos de inspeção de linha de transmissão fossem realizados em linhas desenergizadas, o processo seria bem mais simples e rápido, porém existem diversos problemas atrelados ao fato de que existem inúmeras cargas consumidoras que necessitam da energia elétrica gerada.
+Aliado a isso, existe um aumento na demanda por profissionais qualificados cada vez maior nesse setor. Em adição, há ainda uma notória dificuldade em capacitar trabalhadores para lidar com tecnologias as quais eles não tiveram contato durante o ensino médio e fundamental. Alguns conceitos, que não são novos, como sistemas autônomos, \textit{Machine Learning}, \textit{big data}, tem despertado a curiosidade e estimulando a imaginação da sociedade. Porém, isso vem trazendo alguns equívocos.
 
+Um dos problemas encontrados na formação de profissionais para atuar na área da robótica, é que, diante destes “novos” conceitos as pessoas tendem a se retrair e ter uma noção equivocada, pensando que estes conceitos, que são primordiais para robótica, são extremamente difíceis e complexos, quando na verdade a abordagem de ensino não se preocupa com a desmistificação destes conceitos. É comum ouvir que a automação irá estabelecer novas relações trabalhistas, que irá extinguir alguns empregos e irá criar outros, porém, será que a nossa sociedade está preparada para estes novos empregos? 
+
+Voltando ao campo da pedagogia, foi através de cenários semelhantes à este, que nasceram os movimentos Maker e STEM, oriundos da metodologia Do It Yourself (em português: faça você mesmo). Segundo \cite{Pugliese} ambos valorizam a possibilidade de utilizar das informações obtidas por pesquisa e conteúdo online de fácil acesso para fazer projetos com as próprias mãos. Esses projetos devem fomentar a utilização de equipamentos relacionados à áreas da ciência e da engenharia, seja com ajuda de um computador, impressora 3D ou ferramentas. Essa abordagem visa aumentar a atratividade para as áreas da ciência e desmistificar tabus relacionados à dificuldade de se aprender novas tecnologias.
+ 
+Como resultado, mais jovens e adultos interessam-se por tecnologia, seguem carreiras na área e aumentam o número de profissionais qualificados no mercado.
+Ainda no campo da pedagogia, segundo \cite{Mataric} o ensino da robótica é interdependente de aulas no formato da pedagogia clássica, porém melhor aproveitado quando associado a atividades práticas em grupo. Por este motivo considera-se que o movimento Maker e algumas metodologias de ensino de robótica são baseadas na concepção de Lev Vygotsky, onde o sujeito é considerado um ser não só ativo como também interativo, porque adquire conhecimentos a partir de relações intra e interpessoais, exercitando o que o homem tem de melhor: a criatividade.
+ 
+Palangana, \cite{Palangana}, diz que segundo a concepção de Vygotsky, a aquisição de conhecimentos se dá pela interação do sujeito com o meio. Essa associação visa apresentar de forma menos abstrata conceitos abordados nas aulas teóricas e propor compartilhamento de aprendizagem e fomentar o trabalho em grupo entre os alunos dos níveis Fundamental II e Médio.
+
+Analisando a conjuntura atual, uma nova abordagem ao ensino de conceitos básicos de robótica foi idealizada, sendo apresentada como um kit didático de robótica básica aplicada. Este kit terá como principal objetivo o ensino teórico e prático, de conceitos e ferramentas básicas utilizadas no mundo da robótica, em aplicações nos mais diversos setores da sociedade.
+ 
+Tendo em vista o abordado acima, esta monografia tem como objetivo apresentar o projeto de um kit didático de aprendizagem de conceitos básicos em robótica aplicada, utilizando o framework ROS e aplicando conceitos básicos de cinemática e visão computacional.
 
 %--------- NEW SECTION ----------------------
 \section{Organização do \thetypework}
@@ -72,15 +52,13 @@ Para o desenvolvimento do sistema é necessário realizar o estudo da movimenta�
 O documento está organizado em cinco capítulos, seguindo a seguinte estrutura:
 
 \textbf{Capitulo 1 - Introdução}: Faz a contextualização do âmbito no qual a pesquisa proposta
-está inserida. Apresenta, portanto, a problemática, objetivos e como este projeto Theoprax de conclusão de curso está estruturado
+está inserida. Propõe justificar a problemática abordada, e porque a mesma é passível de uma solução. Apresenta, portanto, a problemática, as justificativas e os objetivos deste trabalho.
 
 
-\textbf{Capítulo 2 - Referencial Teórico}: Apresenta a base teórica necessária para o desenvolvimento do projeto.
+\textbf{Capítulo 2 - Referencial Teórico}: Apresenta o embasamento teórico que foi utilizado para melhor compor o desenvolvimento do projeto.
 
-\textbf{Capítulo 3 - Metodologia}: Define o método adotado para o desenvolvimento do projeto, explicitando seu fluxo de atividades e premissas necessárias para aplicar a metodologia.
+\textbf{Capítulo 3 - Metodologia}: Define as etapas de elaboração do trabalho, tal como as metodologias específicas utilizadas em cada etapa do desenvolvimento e suas justificativas.
 
-\textbf{Capítulo 4 - Desenvolvimento}: Exibe os procedimentos realizados e resultados obtidos através de testes, unitários e integrados, durante o desenvolvimento do projeto.
+\textbf{Capítulo 4 - Desenvolvimento}: Apresenta o que foi produzido neste trabalho do ponto de vista de todas as frentes abordadas, partindo das conclusões tiradas para iniciar as confecções dos tutoriais e do kit físico, até o resultado final das mesmas.
 
-\textbf{Capítulo 5 - Conclusão}: Apresenta as conclusões, contribuições e algumas sugestões de atividades de pesquisa a serem desenvolvidas futuramente.
-
-
+\textbf{Capítulo 5 - Conclusão}: Apresenta as conclusões tiradas acerca do que foi desenvolvido e das influências das metodologias utilizadas, tal como possíveis melhorias e expansões futuras.
