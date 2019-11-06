@@ -150,7 +150,7 @@ A figura \ref{fig:term_dyba} mostra a validação do teste de integração entre
 	\source{Learnbotics}
 \end{figure}
 
-
+git
 \subsection{Hardware}
 Como citado na anteriormente neste trabalho, para que o kit didático seja utilizado de forma modularizada e sem necessidade de uma fonte de tensão variável, foi pensado a utilização de uma batera para alimentar a Raspberry e os motores. Abaixo, a figura \ref{fig:esq_ele} demonstra um diagrama elétrico simplicado do robô.
 
@@ -192,6 +192,48 @@ Como citado na anteriormente neste trabalho, para que o kit didático seja utili
     
 A figura \ref{fig:dyna_config} apresentam que um dynamixel mx28 alto torque necessita de 1.7 A, como são dois em série, o total necessário do conjunto é 3.4 A. Como pode ser visto na figura \ref{fig:nh2054_2}, a corrente máxima que o conversor pode oferecer é 5 A, logo, o requisito de corrente é comprido com este conversor.
 
+Percebe-se pela imagem \ref{fig:esq_ele} que há o conversor LM2596 (número 02). Este conversor tem como intuito alimentar a Raspberry com a tensão de 5v. Ele é um \textit{Stepdown}, o que significa que ele só trabalha para reduzir a tensão de operação. 
+
+\subsubsection{Calibração dos conversores}
+Como citado anteriormente, há a necessidade de uma tensão fixa de alimentação para os motores e a raspberry, tendo isso em vista, foi feita a calibração dos conversores para obter estas tensões de saída. 
+
+Para a calibração, foram utilizados os seguintes materiais:
+
+\begin{itemize}
+	\item Voltímetro
+	\item Fonte variável
+	\item Conversor LM2596
+	\item Conversor XL6019		
+\end{itemize}
+
+A calibração foi feita da seguinte maneira:
+\begin{enumerate}
+	\item Ajustar a fonte para ter uma tensão de saída de 14.4 V (tensão nominal da bateria)
+	\item Conectar a fonte com o conversor;
+	\item Medir a tensão de saída do conversor com o voltímetro;
+	\item Ajustar a tensão de saída de acordo com o desejado.
+\end{enumerate}
+
+O passo quatro é por tentativa e erro, ou seja, para variar a tensão de saída dos conversores, deve-se girar um potenciômetro instalado nos conversores, com isso, o ajuste é feito manualmente.
+
+A figura \ref{fig:con1} apresenta o resultado da calibração do xl6019 e a figura \ref{fig:con2} o LM2596.
+
+    \begin{figure}[H]
+    	\centering
+    	\includegraphics[scale=0.4, angle=0]{Figures/conversor1.jpg}
+    	\caption{Calibração do conversor XL6019}
+    	\label{fig:con1}
+    	\source{Learnbotics}
+    \end{figure}
+    
+    \begin{figure}[H]
+    	\centering
+    	\includegraphics[scale=0.4, angle=0]{Figures/conversor2.jpg}
+    	\caption{Calibração do conversor LM2596}
+    	\label{fig:con2}
+    	\source{Learnbotics}
+    \end{figure}
+    
 \section{Tutoriais}
 De forma a melhor organizar a elaboração do conteúdo dos tutoriais, uma divisão dos mesmos foi feita de acordo com o assunto abordado, ocasionando assim uma menor abrangência de assuntos a serem pesquisados, de conteúdos a serem concentrados e de novas interpretações a serem elaboradas. As subseções a seguir tratarão de partes específicas dos tutoriais.
 
@@ -240,7 +282,6 @@ Como previamente abordado neste trabalho, um dos métodos de ensino proposto pel
 	\caption{Exemplo de segmentação de cores}
 	\label{fig:vermelho}
 \end{figure}
-\subsection{Tutoriais da Raspberry Pi}
 
 \subsection{Tutoriais dos Dynamixels}
 Após ter tido contato com o conceito de atuadores, o estudante irá encontrar também um tutorial que faz uma introdução aos servo-motores inteligentes Dynamixel$^{TM}$.
