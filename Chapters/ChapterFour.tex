@@ -1,3 +1,4 @@
+% !TeX spellcheck = <none>
 x'\chapter{Desenvolvimento}
 \label{chap:desen_test}
 \begin{flushright}
@@ -12,9 +13,8 @@ Para obter de forma efetiva o proposto na metodologia, foram elaborados dois con
 \section{Preparação do Robô}
 Para que tudo o que foi pensado pelo projeto pudesse ser desenvolvido e passado ao usuário, uma escolha cuidadosa do hardware foi efetuada. Posteriormente, uma configuração e testes deste hardware foram também realizados.
 
-\subsection{Hardware}
+\subsection{Raspberry e o SO}
 
-\subsubsection{Testes de Hardware}
 Como apresentado anteriormente, o kit físico irá conter os seguintes componentes:
 \begin{table}
 	\centering
@@ -36,8 +36,7 @@ Como apresentado anteriormente, o kit físico irá conter os seguintes component
 	\end{small}
 \end{table}
 
-Muito dos componentes acima são comumente utilizados, tendo uma alta qualidade atrelada, porém, somente quando atreladas à um uso comum. Como o projeto deste trabalho envolvia o uso de uma raspberry, tornou-se necessário o teste de integração entre os componentes e a raspberry.
-\subsubsection{Sistema operacional da Raspberry}
+Muito dos componentes apresentados na \ref{Tabela1} são comumente utilizados, tendo uma alta qualidade atrelada, porém, somente quando atreladas à um uso comum. Como o projeto deste trabalho envolvia o uso de uma raspberry, tornou-se necessário o teste de integração entre os componentes e a raspberry.
 
 Para a utilização dos ROS e OpenCV é preferível que estes estejam instalados em um SO (Sistema Operacional) com base em LINUX e com suporte ao ROS e OpenCV. Inicialmente foi testado o Ubuntu 16.04 server. Este SO é um derivativo do Ubuntu 16.04, a única diferença é que este não compõe a parte gráfica. Teoricamente, o Ubuntu server seria o Sistema operacional perfeito para a aplicação deste trabalho, por ser um sistema sólido, amplamente testado e que tem um dos melhores suportes às ferramentas utilizadas. Com tudo, há um pequeno problema na utilização dele, que não há suporte gráfico, ou seja, o aluno de cara teria um grande estranhamento de apenas utilizar o terminal para conseguir fazer as aplicações e desafios compostos no kit. 
 
@@ -59,10 +58,11 @@ Para instalação do SO na Raspberry, foram utilizados os seguintes materiais, m
 	\includegraphics[scale=0.8, angle=0]{Figures/so.png}
 	\caption{Componentes necessários para instalar o SO}
 	\label{fig:SO}
+	\source{Learnbotics}
 \end{figure}
 
 A instalação do SO em si foi seguindo o tutorial disposto no próprio site da \cite{RASPB}, o raspberrypi.org. Lá contém tudo que é necessário para instalar, os passos a serem seguidos e como otimizar a Raspberry.
-\subsubsection{ROS na Raspberry}
+\subsection{ROS para Raspberry}
 Para o comprimento dos requisitos funcionais do kit, faz-se necessário a instalação do framework de robótica ROS. Este passo normalmente é fácil e intuitivo, porém, quando se trata de uma ARM (Advanced RISC Machine) a instalação de frameworks como este tornam-se mais complexo. Esta dificuldade é consequência por dois fatores:
 
 \begin{enumerate}
@@ -90,7 +90,7 @@ Como previamente comentado, foi feito a mudança do Ubuntu para o Raspbian. Com 
 
 Para a instalação do ROS no Rasbpian, foi seguido o tutorial disponível no próprio site do ROS, o ROS.org. Porém, houveram alguns problemas com a instalação do Framework neste SO, desde problemas com dependências, com o próprio ROS etc. Estes percalços ocasionaram em um atraso de alguns dias no projeto, já que até então, não eram conhecidos e mapeados. 
 
-\subsubsection{Instalação do OPENCV na Raspberry}
+\subsection{Instalação do OPENCV na Raspberry}
 Para as aplicações de visão computacional, deve-se utilizar o OpenCV. Este contém inúmeras bibliotecas que viabilizam e possibilitam a identificação de cores, marcos fiduciais etc. Com isso, faz-se necessário a instalação desta ferramenta na Raspberry a fim de possibilitar ao aluno trabalhar com os princípios da visão computacional.
 
 Há inúmeros tutoriais dispostos na internet para a instalação do OpenCV no sistema da Raspberry, especialmente com o Raspbian. Porém, a complexidade é tão alta quanto a instalação do ROS, por isso, a equipe concluiu que tanto o ROS quanto o OpenCV iriam ser entregues instalados na Raspberry.
@@ -104,15 +104,136 @@ Para testar se o OpenCV foi instalado corretamente, foi testado um algoritmo sim
 	\label{fig:aruco1}
 \end{figure}
 
-\subsection{Software}
+\subsection{Testes dos Dynamixels na Raspberry}
+Os dynamixels tem como principal diferencial a sua conexão com o ROS proveniente da Robotis, a empresa que comercializa estes servos motores. Entretanto, como o ROS para o sistema da Raspberry é limitado e conta com alguns erros de compilação, fez-se necessário o teste dos dynamixels em conexão com a Raspberry. Os seguintes passos foram planejados para serem seguidos:
 
-=======
+\begin{enumerate}
+	\item Identificação da baudrate dos dynamixels;
+	\item Download e compilação do pacote DynamixelSDK para a Raspberry;
+	\item Construção dos algoritimos de configuração e launchers;
+	\item Teste de conexão via ROS
+\end{enumerate}
 
-\subsection{Software}
+Estes quatro passos são a metodologia padrão quando há a necessidade de configurar um dynamixel, porém, ao decorrer dos passos, a equipe se deparou com alguns empecilhos:
+\begin{itemize}
+	\item O pacote DynamixelSDK não era compilado pelo sistema por falta de memória;
+	\item A identificação da baudrate não pode ser no sistema do mini computador, já que os programas disponíveis para a identificação não eram otimizados para uma ARM.
+\end{itemize}
 
->>>>>>> desenv
-\subsubsection{Testes de Software}
+Para solucionar estes problemas, a configuração dos baudrates dos dynamixels foram feitos em um computador externo utilizando o \cite{mixcell}.
+O pacote DynamixelSDK é de suma importancia para a comunicação entre os servo motores e o ROS, com isso, para solucinar o problema de não compilação foi feito um procedimento de compilação em um computador externo com conexão SSH.
+Portanto, após a identificação destes problemas, a equipe concluiu que os dynamixels já deveriam estar configurados na entrega do kit, diminuindo assim possíveis problemas.
 
+Para os testes foram utilizados os seguintes materiais:
+\begin{itemize}
+	\item 02 Dynamixels MX28;
+	\item Conector RS-232
+	\item FOnte variável
+\end{itemize}
+
+A figura \ref{fig:dyna_cone} demonstra como foi feita a conexão entre os dynamixels, fonte e o computador.
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.8, angle=0]{Figures/dynamixel_conexao.png}
+	\caption{Conexão para os dynamixels}
+	\label{fig:dyna_cone}
+	\source{Robotis}
+\end{figure}
+
+A figura \ref{fig:term_dyba} mostra a validação do teste de integração entre o servo-motor e o ROS. Ela mostra os motores dando o feedback de posição, speed etc por via de tópicos do ROS.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.8, angle=0]{Figures/terminal_dyna.png}
+	\caption{Conexão para os dynamixels}
+	\label{fig:term_dyna}
+	\source{Learnbotics}
+\end{figure}
+
+git
+\subsection{Hardware}
+Como citado na anteriormente neste trabalho, para que o kit didático seja utilizado de forma modularizada e sem necessidade de uma fonte de tensão variável, foi pensado a utilização de uma batera para alimentar a Raspberry e os motores. Abaixo, a figura \ref{fig:esq_ele} demonstra um diagrama elétrico simplicado do robô.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.7, angle=0]{Figures/diagrama.jpeg}
+	\caption{Esquema elétrico}
+	\label{fig:esq_ele}
+	\source{Learnbotics}
+\end{figure}
+
+ A bateria NH2054, tendo o número 1 na figura \ref{fig:esq_ele}, contêm oito células do tamanho de íon de lítio 18650 em um formato de 4 séries e 2 paralelas, dispondo de uma tensão nominal de 14.4V. Entretanto, a tensão pode variar de 16.8 V, quando totalmente carregada e 9.6 V em \textit{cut-off}. Esta variação pode vir a queimar os dynamixels, já que a tensão de trabalho deles é de 10 a 14.8 V, sendo recomendada 12 V, como pode ser visto na figura \ref{fig:dyna_config}. 
+ 
+ \begin{figure}[H]
+ 	\centering
+ 	\includegraphics[scale=0.7, angle=0]{Figures/dynamixel_config.png}
+ 	\caption{Esquema elétrico}
+ 	\label{fig:dyna_config}
+ 	\source{Robotis}
+ \end{figure}
+ 
+ Tendo isso em vista, foi pensado a utilização do conversor DC DC XL6019 (Número 03), ele é um \textit{stepdown BUST}, o que significa que mesmo a bateria alcançando tensões menores que 12 V, o conversor irá suprir os dynamixels sempre com 12 V, o inverso é verdadeiro, quando ocorrer tensões acima de 12 V, o conversor irá energizar os motores com 12V. A figura \ref{fig:nh2054_1} apresenta as informações sobre o XL6019 e suas tensões máximas de entrada e saída. A figura \ref{fig:nh2054_2} apresenta a corrente máxima que o DC DC pode fornecer, isso foi uma preocupação já que ele irá suprir os dois dynamixels.
+ 
+  \begin{figure}[H]
+  	\centering
+  	\includegraphics[scale=0.7, angle=0]{Figures/NH2054_1.png}
+  	\caption{Informações sobre o conversor NH2054}
+  	\label{fig:nh2054_1}
+  	\source{Inspired Energy}
+  \end{figure}
+  
+    \begin{figure}[H]
+    	\centering
+    	\includegraphics[scale=0.7, angle=0]{Figures/NH2054_2.png}
+    	\caption{Informações sobre o conversor NH2054}
+    	\label{fig:nh2054_2}
+    	\source{Inspired Energy}
+    \end{figure}
+    
+A figura \ref{fig:dyna_config} apresentam que um dynamixel mx28 alto torque necessita de 1.7 A, como são dois em série, o total necessário do conjunto é 3.4 A. Como pode ser visto na figura \ref{fig:nh2054_2}, a corrente máxima que o conversor pode oferecer é 5 A, logo, o requisito de corrente é comprido com este conversor.
+
+Percebe-se pela imagem \ref{fig:esq_ele} que há o conversor LM2596 (número 02). Este conversor tem como intuito alimentar a Raspberry com a tensão de 5v. Ele é um \textit{Stepdown}, o que significa que ele só trabalha para reduzir a tensão de operação. 
+
+\subsubsection{Calibração dos conversores}
+Como citado anteriormente, há a necessidade de uma tensão fixa de alimentação para os motores e a raspberry, tendo isso em vista, foi feita a calibração dos conversores para obter estas tensões de saída. 
+
+Para a calibração, foram utilizados os seguintes materiais:
+
+\begin{itemize}
+	\item Voltímetro
+	\item Fonte variável
+	\item Conversor LM2596
+	\item Conversor XL6019		
+\end{itemize}
+
+A calibração foi feita da seguinte maneira:
+\begin{enumerate}
+	\item Ajustar a fonte para ter uma tensão de saída de 14.4 V (tensão nominal da bateria)
+	\item Conectar a fonte com o conversor;
+	\item Medir a tensão de saída do conversor com o voltímetro;
+	\item Ajustar a tensão de saída de acordo com o desejado.
+\end{enumerate}
+
+O passo quatro é por tentativa e erro, ou seja, para variar a tensão de saída dos conversores, deve-se girar um potenciômetro instalado nos conversores, com isso, o ajuste é feito manualmente.
+
+A figura \ref{fig:con1} apresenta o resultado da calibração do xl6019 e a figura \ref{fig:con2} o LM2596.
+
+    \begin{figure}[H]
+    	\centering
+    	\includegraphics[scale=0.4, angle=0]{Figures/conversor1.jpg}
+    	\caption{Calibração do conversor XL6019}
+    	\label{fig:con1}
+    	\source{Learnbotics}
+    \end{figure}
+    
+    \begin{figure}[H]
+    	\centering
+    	\includegraphics[scale=0.4, angle=0]{Figures/conversor2.jpg}
+    	\caption{Calibração do conversor LM2596}
+    	\label{fig:con2}
+    	\source{Learnbotics}
+    \end{figure}
+    
 \section{Tutoriais}
 De forma a melhor organizar a elaboração do conteúdo dos tutoriais, uma divisão dos mesmos foi feita de acordo com o assunto abordado, ocasionando assim uma menor abrangência de assuntos a serem pesquisados, de conteúdos a serem concentrados e de novas interpretações a serem elaboradas. As subseções a seguir tratarão de partes específicas dos tutoriais.
 
@@ -161,7 +282,6 @@ Como previamente abordado neste trabalho, um dos métodos de ensino proposto pel
 	\caption{Exemplo de segmentação de cores}
 	\label{fig:vermelho}
 \end{figure}
-\subsection{Tutoriais da Raspberry Pi}
 
 \subsection{Tutoriais dos Dynamixels}
 Após ter tido contato com o conceito de atuadores, o estudante irá encontrar também um tutorial que faz uma introdução aos servo-motores inteligentes Dynamixel$^{TM}$.
