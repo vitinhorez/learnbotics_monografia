@@ -58,7 +58,7 @@ Para instalação do SO na Raspberry, foram utilizados os seguintes materiais, m
 	\includegraphics[scale=0.8, angle=0]{Figures/so.png}
 	\caption{Componentes necessários para instalar o SO}
 	\label{fig:SO}
-	\source{Learnbotics}
+	\source{Autores, 2019}
 \end{figure}
 
 A instalação do SO em si foi seguindo o tutorial disposto no próprio site da \cite{RASPB}, o raspberrypi.org. Lá contém tudo que é necessário para instalar, os passos a serem seguidos e como otimizar a Raspberry.
@@ -84,6 +84,7 @@ Para ele, foi feito uma conexão via SSH, utilizando as entradas TX-RX da raspbe
 	\includegraphics[scale=0.8, angle=0]{Figures/TX-RXconexao.png}
 	\caption{Componentes necessários para instalar o ROS}
 	\label{fig:txrx}
+	\source{Autores, 2019}
 \end{figure}
 
 Como previamente comentado, foi feito a mudança do Ubuntu para o Raspbian. Com isso, não se fez necessário a conexão por via TX-RX, já que neste caso, havia o componente gráfico no SO.
@@ -102,6 +103,7 @@ Para testar se o OpenCV foi instalado corretamente, foi testado um algoritmo sim
 	\includegraphics[scale=0.8, angle=0]{Figures/aruco1.png}
 	\caption{Aruco de teste}
 	\label{fig:aruco1}
+	\source{Autores, 2019}
 \end{figure}
 
 \subsection{Testes dos Dynamixels na Raspberry}
@@ -147,7 +149,7 @@ A figura \ref{fig:term_dyba} mostra a validação do teste de integração entre
 	\includegraphics[scale=0.8, angle=0]{Figures/terminal_dyna.png}
 	\caption{Conexão para os dynamixels}
 	\label{fig:term_dyna}
-	\source{Learnbotics}
+	\source{Autores, 2019}
 \end{figure}
 
 git
@@ -159,7 +161,7 @@ Como citado na anteriormente neste trabalho, para que o kit didático seja utili
 	\includegraphics[scale=0.7, angle=0]{Figures/diagrama.jpeg}
 	\caption{Esquema elétrico}
 	\label{fig:esq_ele}
-	\source{Learnbotics}
+	\source{Autores, 2019}
 \end{figure}
 
  A bateria NH2054, tendo o número 1 na figura \ref{fig:esq_ele}, contêm oito células do tamanho de íon de lítio 18650 em um formato de 4 séries e 2 paralelas, dispondo de uma tensão nominal de 14.4V. Entretanto, a tensão pode variar de 16.8 V, quando totalmente carregada e 9.6 V em \textit{cut-off}. Esta variação pode vir a queimar os dynamixels, já que a tensão de trabalho deles é de 10 a 14.8 V, sendo recomendada 12 V, como pode ser visto na figura \ref{fig:dyna_config}. 
@@ -223,7 +225,7 @@ A figura \ref{fig:con1} apresenta o resultado da calibração do xl6019 e a figu
     	\includegraphics[scale=0.4, angle=0]{Figures/conversor1.jpg}
     	\caption{Calibração do conversor XL6019}
     	\label{fig:con1}
-    	\source{Learnbotics}
+    	\source{Autores, 2019}
     \end{figure}
     
     \begin{figure}[H]
@@ -231,7 +233,7 @@ A figura \ref{fig:con1} apresenta o resultado da calibração do xl6019 e a figu
     	\includegraphics[scale=0.4, angle=0]{Figures/conversor2.jpg}
     	\caption{Calibração do conversor LM2596}
     	\label{fig:con2}
-    	\source{Learnbotics}
+    	\source{Autores, 2019}
     \end{figure}
     
 \section{Seleção da Metodologia de Ensino
@@ -294,6 +296,7 @@ Como previamente abordado neste trabalho, um dos métodos de ensino proposto pel
 	\includegraphics[scale=0.75, angle=0]{Figures/vermelho.png}
 	\caption{Exemplo de segmentação de cores}
 	\label{fig:vermelho}
+	\source{Autores, 2019}
 \end{figure}
 
 \subsection{Tutoriais dos Dynamixels}
@@ -325,11 +328,6 @@ Nesta parte dos tutoriais o estudante terá acesso ao programa que fará com que
 De forma a estimular o estudante, uma análise mais minusciosa do código, com comentários parte a parte também foi feita. A partir da explicação do que os comandos do programa fazem o estudante terá condições de alterá-lo para concluir etapas e descobrir coisas por si só.
 
 Para finalizar, o tutorial apresenta um desafio para que o estudante de fato assimile o que lhe está sendo proposto, alterando o código e vendo na prática o que isso ocasiona. \cite{tutCinemat}
-<<<<<<< HEAD
-
-
-=======
->>>>>>> desenv
 
 \subsection{Integração dos assuntos anteriores}
 Como validação de todos os conceitos apresentados na wiki do github \cite{wikiLearn}, a equipe pensou em um desafio que aliasse a visão computacional com os conceitos abordados de cinemática para um robô diferencial. 
@@ -352,8 +350,9 @@ O desafio final é o de maior complexidade apresentado pela equipe, não apenas 
  \begin{figure}[H]
  	\centering
  	\includegraphics[scale=0.75, angle=0]{Figures/testefinal.png}
- 	\caption{Exemplo de segmentação de cores}
+ 	\caption{Mockup de integração}
  	\label{fig:testefinal}
+ 	\source{Autores, 2019}
  \end{figure}
 
 \subsection{Tutoriais de Montagem do Robô}
@@ -366,6 +365,17 @@ O desafio final é o de maior complexidade apresentado pela equipe, não apenas 
 
 \subsection{Montagem}
  
+\section{Apresentação de pôster no V SIINTEC}
 
+A equipe apresentou o trabalho como pôster no quinto Simpósio Internacilnal de Inovação e Tecnologia (SIINTEC), utilizando como título: Learnbotics: Uma nova abordagem de ensino para robótica. O SIINTEC ocorre desde 2015, é um evento anual promovido pelo SENAI CIMATEC. O objetivo deste simpósio é contribuir significamente com o desenvolvimento científico e tecnológico do Brasil, buscando o envolvimento da indústria e academia. 
 
+ \begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.4, angle=0]{Figures/SIINTEC.jpeg}
+	\caption{Apresentação na V SIINTEC}
+	\label{fig:siintec}
+	\source{Autores, 2019}
+\end{figure}
+
+Este trabalho foi apresentado no dia 11/10 via pôster, como pode ser visto na figura \ref{fig:siintec}, logo abaixo. O interessante desta apresentação foi o feedback dos avaliadores e pessoas curiosas, em que a maioria comentaram da necessidade de um projeto que melhorasse a acessibilidade da robótica. 
 
