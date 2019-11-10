@@ -1,7 +1,7 @@
 \chapter{Fundamentação Teórica}
 \label{chap:concep}
 
-\section{Didática}\label{sec:didatica}
+\section{Pedagogia}\label{sec:didatica}
 
 Por muito tempo, segundo \cite{saviani}, nas sociedades antigas e medievais, a educação era obtida pela maioria das pessoas através do trabalho, sendo a escola apenas um complemento secundário disponível a grupos seletos da elite. A partir do surgimento da sociedade capitalista e seus processos mercantis que os trabalhadores passaram a precisar de conhecimentos que não se voltavam apenas a técnicas de trabalho manual como cultivo da terra, mas também a relações mercantis e acumulação de capital, ao qual inclui instrumentos de trabalho e, posteriormente, moeda, marcando o início da idade moderna e avanço da ciência.
 
@@ -169,7 +169,8 @@ Segundo a concepção de Vygotsky, a aquisição de conhecimentos se dá pela in
 
 
 
-\section{O que é um Robô}\label{sec:oque_robo}
+\section{Robótica}\label{sec:oque_robo}
+\subsection{O que é um Robô}
 A partir da primeira Revolução Industrial, houve o advento do uso de máquinas para substituir a mão de obra humana. A busca de cada vez mais automatizar o processo produtivo foi estimulada por diversos princípios, desde os filosóficos, sociais, científicos e  econômicos. Karel Čapek, em 1921, criou a palavra robot a partir da peça RUR (Rossum's Universal Robots), apresentando uma fábrica que criava humanóides (robôs) com o intuito de que sejam obedientes e realizem todo o trabalho físico \cite{wellek}. Na década de 1940, o escritor Isaac Asimov representou o robô com uma imagem um pouco diferente: este foi reapresentado como um dispositivo mecânico com um cérebro programável por humanos, que seguia algumas regras \cite{asimov}. Estas regras são as três fundamentais leis da robótica:
 
 \begin{quote}
@@ -270,62 +271,24 @@ Para que um robô móvel seja autônomo, deve ser capaz de perceber o ambiente �
 	
 \end{itemize}
 
-\subsection{Áreas de Atuação}\label{sec:atuation}
-Com a união dos sensores, atuadores e um controle lógico, o ser humano tem a possibilidade de criar robôs para uma infinidade de áreas de atuações. \cite{siciliano2016} descreve algumas das possíveis áreas em que a robótica pode atuar, como por exemplo:
+\subsection{Controle}\label{sec:control}
 
-\begin{itemize}
-	\item Industrial;
-	
-	\item Subaquática;
-	
-	\item Aéreo;
-	
-	\item Espacial;
-	
-	\item Educação.
-\end{itemize}
+Após realizada a percepção do robô, deve-se criar uma estratégia para controlá-lo. Segundo \cite{siegwart} um robô com rodas diferenciais é um robô móvel cujo movimento é baseado em duas rodas motorizadas acionadas separadamente, com cada roda posicionada em ambos os lados do corpo do robô, assim como evidenciado na Figura 06. Esta configuração permite a movimentação em apenas algumas direções, obrigando o robô a fazer uma manobra caso seja necessário alterar a trajetória. O mecanismo que altera esta trajetória é o controle das velocidades das rodas. Por exemplo: caso seja necessário fazer a curva para esquerda, será preciso reduzir a velocidade da roda esquerda, o que é possibilitado pelo acionamento dos motores separadamente. 
 
-Na área industrial, como visto anteriormente, foi o pontapé para o desenvolvimento da robótica devido a necessidade do aumento de produtividade das grandes empresas. E nesta área a robótica pode atuar em alguns setores, como por exemplo:
+	\begin{figure}[h!]												
+		\centering												
+		\includegraphics[width=0.6\textwidth]{figura6refbot.png}			
+		\caption{Robô com rodas diferenciais
+		}		
+		\label{img:denavit}	
+		\source{\cite{siegwart}}		
+	\end{figure}
 
-\begin{itemize}
-	\item Soldagem: com a necessidade de uma mão de obra muito especializada devido a grande chance de pequenas imperfeições, que podem levar a grandes consequências, foi introduzido a robótica no processo de soldagem industrial para garantir a repetibilidade do processo;
-	
-	\item Transferência/posicionamento de material: da mesma maneira que a soldagem, a robótica foi introduzida para reduzir os danos ocupacionais aos colaboradores causados pelos movimentos repetitivos e levantamento de peso excessivo. Assim como para assegurar a repetibilidade do processo;
-	
-	\item Pintura: motivado pelas condições perigosas de trabalho, a robótica foi inserida neste contexto para reduzir os impactos das tintas na saúde dos operadores e também para garantir a repetibilidade e a eficiência do processo;
-	
-	\item Usinagem: utilizado devido a sua grande precisão, podem ser utilizado nos mais diversos campos da usinagem bastando apenas providenciar a ferramenta adequada.
-\end{itemize}
+\subsection{Marcos Fiduciais}
+De acordo com \cite{lightbody}, um marco fiducial é qualquer objeto colocado no campo de visão de uma imagem que tem o intuito de ser usado como ponto de referência ou medida.
 
-“Os oceanos cobrem cerca de 2/3 da superfície da terra e tem sido crítico para o bem-estar dos seres humanos por toda a história. Atualmente, os mares são uma importante fonte de alimento e outros recursos, como petróleo e gás.” \cite{siciliano2016}. Como destacado pelo autor, os mares e oceanos são peças fundamentais para o desenvolvimento humano ao longo do tempo. No início da exploração subaquática o ser humano contava apenas com mergulhos e veículos submersíveis tripulados. 
+Atualmente alguns marcos fiduciais mais tecnológicos vem sendo desenvolvidos para funcionarem como apontadores de informações, como por exemplo os QR Codes, que podem ser usados para apontar a um endereço digital específico. Há ainda a capacidade de carregar informações de localização de GPS em marcos fiduciais. Um exemplo dessa aplicação é o uso de ArUco Tags ou April Tags que retornam informações de sua localização relativa a algum outro objeto quando encontrados.
 
-Porém, existe a necessidade de explorar regiões que expõem a segurança dos seres humanos, e por conta desta necessidade foram desenvolvidos robôs, seja autônomos ou remotamente operados,  para que assim fosse possível suprir tais necessidades. Atualmente os robôs subaquáticos atuam em três áreas: comercial, científica e militar. Dentre as áreas de atuação, as atividades mais praticadas são a inspeção (equipamentos, tubulações, terreno), instalação e manutenção (equipamentos e tubulações), pesquisa e coleta de objetos.
-
-O grande índice de fatalidades com aeronaves operadas por seres humanos levou os engenheiros a desenvolver máquinas voadoras capazes de ser operadas sem a presença de humanos \cite{siciliano2016}. Com isto os robôs têm grande papel no desenvolvimento de aeronaves não tripuladas. Algumas das aplicações dos robôs nesta área são:
-
-\begin{itemize}
-	\item Observação aérea: podem ser usados tanto para uso civil quanto para militar, podem fazer as seguintes ações: mapeamento de terreno, pesquisas ambientais, monitoramento de plantações, filmagens, identificação de alvos;
-	
-	\item Entrega de carga: utilizados para entrega de carga em locais de difícil acesso às pessoas. Muito utilizados também para fazer a aplicação de agrotóxicos em plantações. Utilizado também pelo os militares para a entrega de mísseis. 
-\end{itemize}
-
-Os robôs são excelentes soluções para o ambiente extremamente perigoso que é o espaço. Segundo a \cite{nasa_2017}, os robôs são utilizados por diversos motivos, o mais importante deles é a segurança para os seres humanos, uma vez que robô podem ser dispensados. Outro motivo é o custo, enviar robôs para o espaço é mais barato que enviar humanos, pois eles não têm as necessidades que os seres humanos têm. Segundo \cite{esa_2014} os robôs espaciais tem duas principais aplicações: 
-
-\begin{itemize}
-	\item Orbital: usado basicamente para a construção, operação e manutenção da Estação Espacial Internacional (ISS) ou de satélites que orbitam o planeta, através de braços robóticos;
-	
-	\item Exploração planetária: viagens longas e perigosas impulsionaram o desenvolvimento de robôs capazes de vasculharem a superfície de planetas ou corpos celestes. Existem uma variedade de robôs com este propósito, como por exemplo rovers e hoppers, penetrômetros e toupeira robótica, balões, dirigíveis e aviões. 
-\end{itemize}
-
-Na educação, os robôs acabam sendo poderosas ferramentas de aprendizado, cada vez mais inseridos no mercado. \cite{siciliano2016} escreve que os robôs, no contexto educacional, possuem três papéis principais. O primeiro é o robô como um projeto de linguagem de programação, que se utiliza um exemplo contextualizado para motivar os estudantes se aprofundarem no assunto. O segundo papel é o robô como foco de aprendizado, em que se utiliza um robô físico para ensinar os mais diversos assuntos técnicos durante a construção de um robô. O terceiro e último papel é o robô como colaborador de aprendizado, em que o estudante não está projetando um robô, mas tendo um robô de alto nível como companheiro de aprendizado. Com esses papéis, a robótica consegue desenvolver o estudante em alguns pontos: 
-
-\begin{itemize}
-	\item No interesse na ciência e engenharia;
-	
-	\item No trabalho em equipe;
-	
-	\item Na resolução de problemas 
-\end{itemize}
-
-
+\subsection{ROS}
+Segundo a Open Source Robotics Foundation \cite{ros}, o ROS, do inglês \textit{Robotic Operating System}, é um sistema operacional para robôs público, gratuito e colaborativo.
 
