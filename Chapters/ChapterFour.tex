@@ -239,80 +239,80 @@ De forma a otimizar o design do robô, algumas considerações iniciais foram le
 	\item O robô será majoritariamente fabricado por manufatura aditiva;
 	\item O robô deve ser composto por peças para montagem gradual; 
 \end{itemize}
-A partir destes detalhes iniciou-se o design do robô. Utilizou-se o software Solidworks 2019 para criar o design de forma interativa. As geometrias buscadas tem características modernas e foram pensadas também para serem eficazes no que concerne a fabricação por manufatura aditiva.
+A partir destes detalhes iniciou-se o design do robô. Utilizou-se o software SOLIDWORKS 2019 para criar o design de forma interativa. As geometrias buscadas tem características modernas e foram pensadas também para serem eficazes no que concerne a fabricação por manufatura aditiva.
 
-Tomando como base o componente de maior peso e volume do sistema, a bateria, foi criada a peça "Chassi 1" para mantê-la na região central e deixar o motor equilibrado com um centro de gravidade mais centralizado e baixo. A imagem~\ref{fig:chassi_1} abaixo representa essa peça.
+Tomando como base o componente de maior peso e volume do sistema, a bateria, foi criada a peça "Chassi 1" para mantê-la na região central e deixar o motor equilibrado com um centro de gravidade centralizado e baixo. A imagem~\ref{fig:chassi_1} abaixo representa essa peça.
 
 \begin{figure}[h!]
 	\centering
-	\includegraphics[width=10cm, height=8cm, angle=0]{chassis_1.png}\\
+	\includegraphics[width=10cm, height=8cm, angle=0]{chassi_1.jpg}\\
 	\caption{Peça Chassi 1 \\ Fonte: Autores, 2019}
 	\label{fig:chassi_1}
 \end{figure}
 
-O rebaixo feito no principal chassi foi feito para manter a bateria encaixada e evitar seu movimento durante o deslocamento do sistema. Além disso, em diversas partes do design do robô, utilizou-se o conceito de Poka Yoke para evitar uma montagem que gerasse dúvidas e fosse demasiadamente complicada. Isso pode ser visto nos 4 furos cilíndricos no chassi que servirão unicamente para encaixar os pinos de peças que se encaixam ao chassi. Na parte frontal do Chassi também existem entradas para que o Chassi 2 se acople a ele.
+O rebaixo feito no principal chassi foi feito para manter a bateria encaixada e evitar seu movimento durante o deslocamento do sistema. Além disso, em diversas partes do design do robô, utilizou-se o conceito de Poka Yoke para que o encaixe das peças seja intuitivo e erros sejam prevenidos no momento da montagem. Isso pode ser visto nos quatro furos cilíndricos no chassi que servirão unicamente para encaixar os pinos de peças que se encaixam ao chassi. Na parte frontal do Chassi também existem entradas para que o Chassi 2 se acople a ele.
 
 O segundo componente a ser criado foi o suporte do Dynamixel, que será responsável por fixar os servomotores ao chassi principal. Este componente é simples e foi feito para se encaixar perfeitamente no Dynamixel, com furo para passagem do eixo e pinos
-para encaixe, como demonstrado na figura~\ref{fig:sup_dyna} abaixo.
+para encaixe, como demonstrado na figura~\ref{fig:suport_dyn} abaixo.
 
 \begin{figure}[h!]
 	\centering
-	\includegraphics[width=10cm, height=7cm, angle=0]{suporte_dynamixel.png}\\
+	\includegraphics[width=7cm, height=8cm, angle=0]{suport_dyn.jpg}\\
 	\caption{Peça Suporte Dynamixel \\ Fonte: Autores, 2019}
-	\label{fig:sup_dyna}
+	\label{fig:suport_dyn}
 \end{figure}
 
-Em seguida, foram criadas as rodas traseiras do robô, como demonstradas na figura ~\ref{fig:roda_traseira} abaixo, responsáveis por transmitir a tração dos motores e movimentar a estrutura. Sua geometria foi pensada de forma em que sejam encaixadas no flange do Dynamixel com 4 parafusos para a fixação.
+Em seguida, foram criadas as rodas traseiras do robô, como demonstradas na figura ~\ref{fig:roda_} abaixo, responsáveis por transmitir a tração dos motores e movimentar a estrutura. Sua geometria foi pensada de forma em que sejam encaixadas no flange do Dynamixel com quatro parafusos para a fixação. Um parafuso adicional será utilizado para conectar a roda ao eixo.
 
 \begin{figure}[h!]
 	\centering
-	\includegraphics[width=8cm, height=7cm, angle=0]{roda_traseira.png}\\
+	\includegraphics[width=6cm, height=6cm, angle=0]{roda_.jpg}\\
 	\caption{Peça Roda Traseira \\ Fonte: Autores, 2019}
-	\label{fig:roda_traseira}
+	\label{fig:roda_}
 \end{figure}
 
 Com as duas rodas traseiras sendo as únicas responsáveis pela tração, foi necessário criar um sistema de roda boba na parte frontal do robô, para que este consiga se deslocar em qualquer direção com a devida sustentação. Para isso, foi criado uma peça
-maior a ser fixada no chassi principal que terá a função de segurar uma esfera, que servirá de roda boba. Uma peça menor será responsável por manter a esfera sempre em contato com o chão, empurrando-a de cima para baixo. Essas peças estão demonstradas na figura~\ref{fig:roda_boba} abaixo, e o esquema para montar esse subsistema está demonstrado na imagem~\ref{fig:mont_roda_boba} abaixo.
+ a ser fixada no chassi principal que terá a função de segurar uma esfera, que servirá de roda boba. Uma peça menor será responsável por manter a esfera sempre em contato com o chão, empurrando-a de cima para baixo. Essas peças estão demonstradas na figura~\ref{fig:roda_boba} abaixo, e o esquema para montar esse subsistema está demonstrado na imagem~\ref{fig:roda_boba_montado} abaixo.
 
 \begin{figure}[h!]
 	\centering
-	\includegraphics[width=9cm, height=7cm, angle=0]{componentes_roda_frontal.png}\\
+	\includegraphics[width=8cm, height=7.5cm, angle=0]{roda_boba.png}\\
 	\caption{Peças da Roda Boba \\ Fonte: Autores, 2019}
 	\label{fig:roda_boba}
 \end{figure}
 
 \begin{figure}[h!]
 	\centering
-	\includegraphics[width=8cm, height=7cm, angle=0]{esquema_montagem_parte_frente.png}\\
+	\includegraphics[width=9cm, height=7cm, angle=0]{roda_boba_montado.jpg}\\
 	\caption{Montagem da Roda Boba \\ Fonte: Autores, 2019}
-	\label{fig:mont_roda_boba}
+	\label{fig:roda_boba_montado}
 \end{figure}
 
-Todo esse conjunto será fixado primeiramente no Chassi 3, que tem como função conectar o conjunto da roda boba ao chassi principal e servir de base para o primeiro conversor DC-DC. O conversor DC-DC tem a função de regular a tensão da bateria que sai a 14,4V e precisa chegar aos servomotores e ao Raspberry com 5V.
+Todo esse conjunto será fixado primeiramente no Chassi 3, que tem como função conectar o conjunto da roda boba ao chassi principal e servir de base para o primeiro conversor DC-DC. O conversor DC-DC tem a função de regular a tensão da bateria que sai a 14,4V e precisa chegar ao Raspberry com 5V.
 
 Com a parte inferior do robô finalizada, deu-se início a construção da parte superior, onde fica o cérebro do robô, o Raspberry Pi. Para servir de base para o Raspberry e de cobertura para a bateria, o Chassi 2 foi criado, como mostrado na figura~\ref{fig:chassi_2}
 
 \begin{figure}[h!]
 	\centering
-	\includegraphics[width=9cm, height=7cm, angle=0]{chassis_2.png}\\
+	\includegraphics[width=9cm, height=7cm, angle=0]{chassi_2.png}\\
 	\caption{Peça Chassi 2 \\ Fonte: Autores, 2019}
 	\label{fig:chassi_2}
 \end{figure}
 
-Foram alocados 4 furos para segurar a Raspberry, 2 furos para o segundo conversor DC-DC e mais 4 furos para a fixação no chassi principal. O Raspberry Pi funciona como um mini computador, o qual terá os códigos e informações necessárias para acionar os
-motores. Mais a frente as suas funcionalidades serão mais exploradas.
+Foram alocados quatro furos para segurar a Raspberry, dois furos para o segundo conversor DC-DC e mais quatro furos para a fixação no chassi principal. O Raspberry Pi funciona como um mini computador, o qual terá os códigos e informações necessárias para acionar os
+motores. 
 
-Por fim, uma capa foi criada para proteger a Raspberry e o conversor da parte superior, além de dar um aspecto moderno ao robô, com linhas diagonais simulando uma seta para frente, como demonstrado na figura~\ref{fig:capa} abaixo. Em frente a capa foi deixado um espaço para a Webcam, que fará as filmagens e auxiliará o sistema a interpretar as imagens com a visão computacional.
+Por fim, uma capa foi criada para proteger a Raspberry e o conversor da parte superior, além de dar um aspecto moderno ao robô, com linhas diagonais simulando uma seta para frente, como demonstrado na figura~\ref{fig:capa_learn} abaixo. Em frente a capa foi deixado um espaço para a Webcam, que fará as filmagens e auxiliará o sistema a interpretar as imagens com a visão computacional. Ao lado foi feito um corte para permitir a passagem dos conectores HDMI e Micro USB ao Raspberry Pi.
 
 \begin{figure}[h!]
 	\centering
-	\includegraphics[width=11cm, height=7cm, angle=0]{montagem_capa.png}\\
+	\includegraphics[width=11cm, height=7cm, angle=0]{capa_learn.jpg}\\
 	\caption{Peça Capa Superior \\ Fonte: Autores, 2019}
-	\label{fig:capa}
+	\label{fig:capa_learn}
 \end{figure}
 
 \subsection{Fabricação}
-Como mencionado anteriormente, o robô foi pensado para que em sua grande maioria, com excessão de componentes já prontos e peças de fixação como parafusos e porcas, fosse fabricado através de manufatura aditiva.
+Como mencionado anteriormente, o robô foi pensado para que em sua grande maioria, com exceção de componentes já prontos e peças de fixação como parafusos e porcas, fosse fabricado através de manufatura aditiva.
 
 Essa decisão se justifica devido ao fato de que o proposto por essa abordagem de ensino tem como finalidade ser democrática e abrangente para diversos públicos. A utilização de Impressoras 3D para fabricação das peças do robô é fundamental para essa questão, uma vez que possibilita que qualquer pessoa que possua uma impressora, seja capaz de fabricar as peças e utilizar o kit.
 
@@ -335,19 +335,19 @@ Após fabricação concluída, disponibilização dos componentes de fixação, 
 	\item 12 Porcas M2.5
 	\item 2 Porcas M3
 	\item 16 Parafusos de cabeça escareada M2.5 de 12mm
-	\item 6 Parafusos de cabeça escareada M2.5 de 25mm
-	\item 16 Parafusos Allen de cabeça cilíndrica 3-48 1/2"
+	\item 4 Parafusos de cabeça escareada M2.5 de 25mm
+	\item 8 Parafusos Allen de cabeça cilíndrica 3-48 1/2"
 	\item 2 Parafusos Allen de cabeça cilíndrica 3-48 7/16"
 	\item 2 Parafusos Allen de cabeça escareada M3 de 6mm
 	\item 8 Parafusos Allen de cabeça cilíndrica M2.5 de 4mm
 \end{itemize}
-Com todos os componentes em mãos, o estudante pode proceder para a montagem acompanhando o passo a passo disponibilizado no tutorial de montagem do robô. \cite{tutMont} O resultado da montagem do robô pode ser visualizado na figura ~\ref{fig:robo_montado} a seguir.
+Com todos os componentes em mãos, o estudante pode proceder para a montagem acompanhando o passo a passo disponibilizado no tutorial de montagem do robô. \cite{tutMont} O resultado da montagem do robô pode ser visualizado na figura ~\ref{fig:learnbotics_rend} a seguir.
 
 \begin{figure}[h!]
 	\centering
-	\includegraphics[width=10cm, height=15cm, angle=0]{robo_montado.jpeg}\\
+	\includegraphics[width=12cm, height=10cm, angle=0]{learnbotics_rend.jpg}\\
 	\caption{Robô Completo \\ Fonte: Autores, 2019}
-	\label{fig:robo_montado}
+	\label{fig:learnbotics_rend}
 \end{figure}
 
 
