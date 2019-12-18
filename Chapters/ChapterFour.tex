@@ -30,12 +30,91 @@ De posse dos requisitos do projeto, o próximo passo foi realizar uma pesquisa s
 \subsection{Definição}
 Após a realização das etapas descritas anteriormente, pôde-se de fato escrever uma solução proposta. A solução proposta foi dividida em duas partes, o Kit Físico e os Tutoriais, como descrito a seguir.
 
-Kit Físico: Utilização da Raspberry Pi como controlador central, utilização dos dynamixels mx-28 como atuadores, kit modulado com módulos integrados e sequenciais para montagem de um robô reconhecedor de marcos fiduciais. A finalização do Kit culminará em um robô com movimentação diferencial e capacidade de visão com a utilização de uma câmera RGB.
+Kit Físico: Utilização da Raspberry Pi como controlador central, utilização dos dynamixels mx-28 como atuadores, kit modulado com módulos integrados e sequenciais para montagem de um robô reconhecedor de marcos fiduciais. A finalização do Kit culminará em um robô com movimentação diferencial e capacidade de visão com a utilização de uma câmera RGB. Todos os componentes podem ser  visto na tabela \ref{Tabela1}:
+
+\begin{table}
+	\centering
+	\begin{small}
+		\caption{Componentes constituintes do kit fisíco.} \label{Tabela1}
+		\begin{tabular}{cc}
+			\hline
+			Componentes              & Quantidade\\
+			\hline
+			Raspberry Pi3B              & 1 \\
+			Dynamixel MX-28                & 2 \\
+			Câmera RGB                    & 1 \\
+			Rodas emborrachadas            & 2 \\
+			Roda boba                    & 1 \\
+			Cabos e conexões            & x \\
+			Bateria                     & 1 \\
+			Conversores DCDC            & 2 \\
+			\hline
+		\end{tabular}
+	\end{small}
+\end{table}
 
 Tutoriais: Linguagem simples e acessível, metodologia intuitiva, presença de desafios.
 Conteúdos a serem abordados: Breve histórico da robótica, partes de um robô, funcionalidades encontradas em robôs completos, introdução a áreas da robótica, abordagem prática do framework ROS em compatibilidade com a Raspberry Pi, abordagem prática de conceitos de programação em Python com a utilização de programas modelos acompanhados de tutoriais de mudança e proposição de desafios,
 programação de atuação dos servos para movimentação diferencial simples, abordando conceitos facilitados de cinemática diferencial e seu funcionamento. Introdução à visão computacional com introdução a biblioteca do OpenCV e tratamentos simples de imagens.
 Implementação de uma integração da movimentação com a visão computacional.
+
+\subsubsection{Metodologia de ensino}
+
+\begin{figure}[h!]                                                
+	\centering        
+	\includegraphics[width=0.5\textwidth]{Rep_graf_metodo.PNG}            
+	\caption{Representação Gráfica da Metodologia}        
+	\label{img:rep_metod}    
+	\source{Autores, 2019}        
+\end{figure}
+
+A proposta de desenvolvimento será baseada na figura~\ref{img:rep_metod} abaixo, que apresenta os macro itens envolvidos, assim como uma exemplificação de como essas informações serão apresentadas ao estudante.
+
+Estes macro itens são subdivididos da seguinte maneira: Na parte teórica serão apresentados ao estudante conceitos básicos de robótica, baseados nas principais bibliografias e documentos que são normalmente utilizados pela comunidade de robótica, e já na parte prática, o aluno contará com um kit físico para ajudar a absorção dos conteúdos apresentados.
+
+Do ponto de vista teórico, um exemplo do que será disponibilizado são os tutoriais do Framework ROS (do inglês Robot Operating System), que são elaborados pela própria comunidade do ROS. Todavia, não existem versões escritas em português, ou em uma linguagem que se preocupe em ser simplificada, o que dificulta o acesso à essas informações. Assim, a proposta é de utilizar estes tutoriais como inspiração e referência de conteúdo para produção de material escrito em linguagem mais acessível e em português.
+
+Além da produção de tutoriais, há ainda a proposta de apresentar scripts modelo, escritos em python, que servirão como base para explicações de conceitos
+de programação. O foco destes, será de mostrar aos alunos como utilizar métodos e funções próprias do framework. Estes scripts estarão envolvidos diretamente com outro macro item, que é o aprendizado prático. A parte prática tem como foco o estudo e a alteração dos scripts, proporcionando assim o desenvolvimento do estudante em programação.
+
+Cada script modelo estará atrelado a um desafio. Para que o estudante solucione estes desafios, a proposta é que ele leia, interprete e altere o programa
+para realizar uma tarefa específica que vai um pouco além da apresentada pelo script original.
+
+Visando dar forma e visual à conceitos muitas vezes abstratos, o que é interessante na abordagem, é que, atrelado a essas alterações haverão dispositivos
+reais para demonstrar se houve ou não êxito. Alguns exemplos de dispositivos com os quais os estudantes poderão interagir são servomotores e uma câmera, o que
+facilitará uma absorção dos conceitos apresentados.
+Para alcançar estes objetivos de aliar as macro áreas, o estudante terá contato também com uma plataforma online, o GitHub, onde encontrará todos os tutoriais e materiais complementares desenvolvidos.
+
+Paralelo à isso, na parte física, o estudante também terá um kit físico para montagem gradual de um robô com movimentação diferencial. Esta montagem será modular e será regida pelo seu andamento nos tutoriais. O quadro~\ref{tab:quad01} apresenta os componentes presentes no kit.
+
+% Please add the following required packages to your document preamble:
+% \usepackage{graphicx}
+\begin{table}[]
+	\centering
+	\caption{Relação dos Componentes Presentes no Kit Físico.}
+	\label{tab:quad01}
+	\resizebox{\textwidth}{!}{%
+		\begin{tabular}{cccccccc}
+			\textbf{Componentes} & \begin{tabular}[c]{@{}c@{}}Raspberry \\ Pi 3b\end{tabular} & \begin{tabular}[c]{@{}c@{}}Dynamixel \\ MX-28\end{tabular} & \begin{tabular}[c]{@{}c@{}}Câmera \\ RGB\end{tabular} & \begin{tabular}[c]{@{}c@{}}Rodas \\ Emborrachadas\end{tabular} & \begin{tabular}[c]{@{}c@{}}Roda \\ de Apoio\end{tabular} & \begin{tabular}[c]{@{}c@{}}Cabos \\ e Conexões\end{tabular} & Bateria \\
+			\textbf{Quantidade}  & 1                                                            & 2                                                             & 1                                                        & 2                                                                 & 1                                                           & x                                                              & 1      
+		\end{tabular}%
+	}
+\end{table}
+
+A escolha da Raspberry Pi 3.0B se deve por conta da alta disponibilidade no mercado, por apresentar um custo baixo se comparado com outros computadores que serviriam para a mesma finalidade, e principalmente por apresentar poder computacional suficiente para o funcionamento do ROS e das bibliotecas de processamento de imagens que serão utilizadas.
+
+Na Raspberry Pi será utilizado o sistema operacional Raspbian por ser o mais otimizado para a plataforma, por ser derivado de um sistema Linux, e por funcionar
+aliado ao ROS Kinetic, que é hoje a distribuição do ROS mais utilizada pela comunidade da robótica.
+
+O estudante irá receber a Raspberry com todas as bibliotecas necessárias para funcionamento e alteração dos scripts já instaladas, assim como o framework também já instalado, poupando assim o desestímulo inicial que tende a ocorrer no primeiro contato com estas ferramentas.
+
+Serão apresentados os servomotores Dynamixel, por serem amplamente utilizados em projetos robóticos de inovação. Isso ocorre por conta da maior facilidade de integrar estes servos com o ROS, sem precisar utilizar ferramentas mais complexas, como desenvolvimento de drivers e controle PWM (do inglês, Pulse Width Modulation). Em um dos scripts modelo, por exemplo, irá ser apresentada a forma de se comunicar com os servos, juntamente à introdução da cinemática de robôs diferenciais.
+
+A câmera RGB será utilizada para facilitar a introdução de conceitos de visão computacional e suas ferramentas, como a biblioteca do OpenCV (do inglês, Open Computer Vision). Haverão scripts modelo apresentando a integração entre ROS e OpenCV, além da proposição de desafios utilizando conceitos básicos de visão computacional.
+
+Ao final deste módulo, será apresentado para o estudante o desafio final do kit, que se tratará de uma integração dos conhecimentos apresentados previamente.
+
+
 \subsection{Planejamento}
 
 \section{Confecção}
@@ -158,6 +237,230 @@ Com todos os componentes em mãos, o estudante pode proceder para a montagem aco
 	\label{fig:learnbotics_rend}
 \end{figure}
 
+\subsection{Raspberry e o SO}
+
+Como apresentado anteriormente, o kit físico irá conter os seguintes componentes:
+\begin{table}
+	\centering
+	\begin{small}
+		\caption{Componentes constituintes do kit fisíco.} \label{Tabela1}
+		\begin{tabular}{cc}
+			\hline
+			Componentes              & Quantidade\\
+			\hline
+			Raspberry Pi3B              & 1 \\
+			Dynamixel MX-28                & 2 \\
+			Câmera RGB                    & 1 \\
+			Rodas emborrachadas            & 2 \\
+			Roda boba                    & 1 \\
+			Cabos e conexões            & x \\
+			Bateria                     & 1 \\
+			\hline
+		\end{tabular}
+	\end{small}
+\end{table}
+
+Muito dos componentes apresentados na \ref{Tabela1} são comumente utilizados, tendo uma alta qualidade atrelada, porém, somente quando atreladas à um uso comum. Como o projeto deste trabalho envolvia o uso de uma raspberry, tornou-se necessário o teste de integração entre os componentes e a raspberry.
+
+Para a utilização dos ROS e OpenCV é preferível que estes estejam instalados em um SO (Sistema Operacional) com base em LINUX e com suporte ao ROS e OpenCV. Inicialmente foi testado o Ubuntu 16.04 server. Este SO é um derivativo do Ubuntu 16.04, a única diferença é que este não compõe a parte gráfica. Teoricamente, o Ubuntu server seria o Sistema operacional perfeito para a aplicação deste trabalho, por ser um sistema sólido, amplamente testado e que tem um dos melhores suportes às ferramentas utilizadas. Com tudo, há um pequeno problema na utilização dele, que não há suporte gráfico, ou seja, o aluno de cara teria um grande estranhamento de apenas utilizar o terminal para conseguir fazer as aplicações e desafios compostos no kit.
+
+Com isso, foi preferível instalar o SO Raspbian, uma derivação do Debian. O Raspbian é um sistema operacional otimizado e próprio para a Raspberry, tendo suporte para ROS e OpenCV. Não é possível instalar o SO Ubuntu 16.04 com gráficos pois, a Raspberry não consegue comportar ele, já que ela conta com uma memória gráfica limitada.
+
+O que é interessante neste SO que ele é disponibilizado pela própria Raspberry e mantido por ela. Com isso, este sistema vem com diversas aplicações educacionais, e possíveis projetos que se o aluno quiser explorar, poderá encontrar infinitas finalidades.
+
+Para instalação do SO na Raspberry, foram utilizados os seguintes materiais, mostrados na figura \ref{fig:SO}:
+
+\begin{enumerate}
+	\item Raspberry PI 3B+
+	\item Cartão SD 32 GB
+	\item Imagem do Sistema Operacional
+	
+\end{enumerate}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.8, angle=0]{Figures/so.png}
+	\caption{Componentes necessários para instalar o SO}
+	\label{fig:SO}
+	\source{Autores modificado, 2019}
+\end{figure}
+
+A instalação do SO em si foi seguindo o tutorial disposto no próprio site da \cite{RASPB}, o raspberrypi.org. Lá contém tudo que é necessário para instalar, os passos a serem seguidos e como otimizar a Raspberry.
+\subsubsection{ROS para Raspberry}
+Para o comprimento dos requisitos funcionais do kit, faz-se necessário a instalação do framework de robótica ROS. Este passo normalmente é fácil e intuitivo, porém, quando se trata de uma ARM (Advanced RISC Machine) a instalação de frameworks como este tornam-se mais complexo. Esta dificuldade é consequência por dois fatores:
+
+\begin{enumerate}
+	\item A arquitetura é mais simples se comparado com processadores utilizados em computadores pessoais;
+	\item O Sistema Operacional (SO) utilizado é o Raspbian, um SO baseado em Linux próprio para a Raspberry.
+\end{enumerate}
+
+Por conta destes dois fatores, a instalação do framework não pode ser feita da mesma forma que é em um computador normal. Felizmente, há diversos tutoriais disponíveis na Internet para o auxílio desta tarefa, porém, isso não fez diminuir o nível esforço para o comprimento dela.
+
+Tendo em vista esta complexidade, a equipe repensou como iria entregar o kit, mudando assim o requisito que o aluno deveria instalar o ROS na Raspberry. O que é interessante analisar é que o intuito deste trabalho é apresentar de forma fácil e prática o mundo da robótica aplicada para os alunos, então, para que não houvessem desistências prematuras do curso, foi preferido entregar o ROS já incluso.
+\subsubsection{Instalação do ROS na Raspberry}
+
+Inicialmente, foi utilizado o SO Ubuntu 16.04 server. Neste sistema a instalação do framework ROS foi simples, já que este sistema é amplamente utilizado pela comunidade, sendo assim, tem uma maior suporte.
+
+Para ele, foi feito uma conexão via SSH, utilizando as entradas TX-RX da raspberry. Este tipo de conexão facilita a instalação, já que, pela raspberry somente havia o terminal, já que não havia a parte gráfica. A imagem \ref{fig:txrx} abaixo, mostra os componentes utilizados para a instalação.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.8, angle=0]{Figures/TX-RXconexao.png}
+	\caption{Componentes necessários para instalar o ROS}
+	\label{fig:txrx}
+	\source{Autores, 2019}
+\end{figure}
+
+Como previamente comentado, foi feito a mudança do Ubuntu para o Raspbian. Com isso, não se fez necessário a conexão por via TX-RX, já que neste caso, havia o componente gráfico no SO.
+
+Para a instalação do ROS no Rasbpian, foi seguido o tutorial disponível no próprio site do ROS, o ROS.org. Porém, houveram alguns problemas com a instalação do Framework neste SO, desde problemas com dependências, com o próprio ROS etc. Estes percalços ocasionaram em um atraso de alguns dias no projeto, já que até então, não eram conhecidos e mapeados.
+
+\subsubsection{Instalação do OPENCV na Raspberry}
+Para as aplicações de visão computacional, deve-se utilizar o OpenCV. Este contém inúmeras bibliotecas que viabilizam e possibilitam a identificação de cores, marcos fiduciais etc. Com isso, faz-se necessário a instalação desta ferramenta na Raspberry a fim de possibilitar ao aluno trabalhar com os princípios da visão computacional.
+
+Há inúmeros tutoriais dispostos na internet para a instalação do OpenCV no sistema da Raspberry, especialmente com o Raspbian. Porém, a complexidade é tão alta quanto a instalação do ROS, por isso, a equipe concluiu que tanto o ROS quanto o OpenCV iriam ser entregues instalados na Raspberry.
+
+Para testar se o OpenCV foi instalado corretamente, foi testado um algoritmo simples de identificação de Arucos, o resultado pode ser visto na figura \ref{fig:aruco1} logo abaixo. Este mesmo algoritmo está disposto na WIKI no Github do \cite{wikilearn}.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.8, angle=0]{Figures/aruco1.png}
+	\caption{Aruco de teste}
+	\label{fig:aruco1}
+	\source{Autores, 2019}
+\end{figure}
+
+
+\subsubsection{Hardware}
+Como citado na anteriormente neste trabalho, para que o kit didático seja utilizado de forma modularizada e sem necessidade de uma fonte de tensão variável, foi pensado a utilização de uma batera para alimentar a Raspberry e os motores. Abaixo, a figura \ref{fig:esq_ele} demonstra um diagrama elétrico simplicado do robô.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.6, angle=0]{Figures/diagrama.jpeg}
+	\caption{Esquema elétrico}
+	\label{fig:esq_ele}
+	\source{Autores, 2019}
+\end{figure}
+
+A bateria NH2054, tendo o número 1 na figura \ref{fig:esq_ele}, contêm oito células do tamanho de íon de lítio 18650 em um formato de 4 séries e 2 paralelas, dispondo de uma tensão nominal de 14.4V. Entretanto, a tensão pode variar de 16.8 V, quando totalmente carregada e 9.6 V em \textit{cut-off}. Esta variação pode vir a queimar os dynamixels, já que a tensão de trabalho deles é de 10 a 14.8 V, sendo recomendada 12 V, como pode ser visto na figura \ref{fig:dyna_config}.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.7, angle=0]{Figures/dynamixel_config.png}
+	\caption{Esquema elétrico}
+	\label{fig:dyna_config}
+	\source{Robotis}
+\end{figure}
+
+Tendo isso em vista, foi pensado a utilização do conversor DC DC XL6019 (Número 03), ele é um \textit{stepdown BUST}, o que significa que mesmo a bateria alcançando tensões menores que 12 V, o conversor irá suprir os dynamixels sempre com 12 V, o inverso é verdadeiro, quando ocorrer tensões acima de 12 V, o conversor irá energizar os motores com 12V. A figura \ref{fig:nh2054_1} apresenta as informações sobre o XL6019 e suas tensões máximas de entrada e saída. A figura \ref{fig:nh2054_2} apresenta a corrente máxima que o DC DC pode fornecer, isso foi uma preocupação já que ele irá suprir os dois dynamixels.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.7, angle=0]{Figures/NH2054_1.png}
+	\caption{Informações sobre o conversor NH2054}
+	\label{fig:nh2054_1}
+	\source{Inspired Energy}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.7, angle=0]{Figures/NH2054_2.png}
+	\caption{Informações sobre o conversor NH2054}
+	\label{fig:nh2054_2}
+	\source{Inspired Energy}
+\end{figure}
+
+A figura \ref{fig:dyna_config} apresentam que um dynamixel mx28 alto torque necessita de 1.7 A, como são dois em série, o total necessário do conjunto é 3.4 A. Como pode ser visto na figura \ref{fig:nh2054_2}, a corrente máxima que o conversor pode oferecer é 5 A, logo, o requisito de corrente é comprido com este conversor.
+
+Percebe-se pela imagem \ref{fig:esq_ele} que há o conversor LM2596 (número 02). Este conversor tem como intuito alimentar a Raspberry com a tensão de 5v. Ele é um \textit{Stepdown}, o que significa que ele só trabalha para reduzir a tensão de operação.
+
+\subsubsection{Calibração dos conversores}
+Como citado anteriormente, há a necessidade de uma tensão fixa de alimentação para os motores e a raspberry, tendo isso em vista, foi feita a calibração dos conversores para obter estas tensões de saída.
+
+Para a calibração, foram utilizados os seguintes materiais:
+
+\begin{itemize}
+	\item Voltímetro
+	\item Fonte variável
+	\item Conversor LM2596
+	\item Conversor XL6019        
+\end{itemize}
+
+A calibração foi feita da seguinte maneira:
+\begin{enumerate}
+	\item Ajustar a fonte para ter uma tensão de saída de 14.4 V (tensão nominal da bateria)
+	\item Conectar a fonte com o conversor;
+	\item Medir a tensão de saída do conversor com o voltímetro;
+	\item Ajustar a tensão de saída de acordo com o desejado.
+\end{enumerate}
+
+O passo quatro é por tentativa e erro, ou seja, para variar a tensão de saída dos conversores, deve-se girar um potenciômetro instalado nos conversores, com isso, o ajuste é feito manualmente.
+
+A figura \ref{fig:con1} apresenta o resultado da calibração do xl6019 e a figura \ref{fig:con2} o LM2596.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.4, angle=0]{Figures/conversor1.jpg}
+	\caption{Calibração do conversor XL6019}
+	\label{fig:con1}
+	\source{Autores, 2019}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.4, angle=0]{Figures/conversor2.jpg}
+	\caption{Calibração do conversor LM2596}
+	\label{fig:con2}
+	\source{Autores, 2019}
+\end{figure}
+
+\subsubsection{Testes dos Dynamixels na Raspberry}
+Os dynamixels tem como principal diferencial a sua conexão com o ROS proveniente da Robotis, a empresa que comercializa estes servos motores. Entretanto, como o ROS para o sistema da Raspberry é limitado e conta com alguns erros de compilação, fez-se necessário o teste dos dynamixels em conexão com a Raspberry. Os seguintes passos foram planejados para serem seguidos:
+
+\begin{enumerate}
+	\item Identificação da baudrate dos dynamixels;
+	\item Download e compilação do pacote DynamixelSDK para a Raspberry;
+	\item Construção dos algoritimos de configuração e launchers;
+	\item Teste de conexão via ROS
+\end{enumerate}
+
+Estes quatro passos são a metodologia padrão quando há a necessidade de configurar um dynamixel, porém, ao decorrer dos passos, a equipe se deparou com alguns empecilhos:
+\begin{itemize}
+	\item O pacote DynamixelSDK não era compilado pelo sistema por falta de memória;
+	\item A identificação da baudrate não pode ser no sistema do mini computador, já que os programas disponíveis para a identificação não eram otimizados para uma ARM.
+\end{itemize}
+
+Para solucionar estes problemas, a configuração dos baudrates dos dynamixels foram feitos em um computador externo utilizando o \cite{mixcell}.
+O pacote DynamixelSDK é de suma importancia para a comunicação entre os servo motores e o ROS, com isso, para solucinar o problema de não compilação foi feito um procedimento de compilação em um computador externo com conexão SSH.
+Portanto, após a identificação destes problemas, a equipe concluiu que os dynamixels já deveriam estar configurados na entrega do kit, diminuindo assim possíveis problemas.
+
+Para os testes foram utilizados os seguintes materiais:
+\begin{itemize}
+	\item 02 Dynamixels MX28;
+	\item Conector RS-232
+	\item FOnte variável
+\end{itemize}
+
+A figura \ref{fig:dyna_cone} demonstra como foi feita a conexão entre os dynamixels, fonte e o computador.
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.8, angle=0]{Figures/dynamixel_conexao.png}
+	\caption{Conexão para os dynamixels}
+	\label{fig:dyna_cone}
+	\source{Robotis}
+\end{figure}
+
+A figura \ref{fig:term_dyna} mostra a validação do teste de integração entre o servo-motor e o ROS. Ela mostra os motores dando o feedback de posição, speed etc por via de tópicos do ROS.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.8, angle=0]{Figures/terminal_dyna.png}
+	\caption{Conexão para os dynamixels}
+	\label{fig:term_dyna}
+	\source{Autores, 2019}
+\end{figure}
+
+
 \subsection{Material Escrito}
 De forma a melhor organizar a elaboração do conteúdo dos tutoriais, uma divisão dos mesmos foi feita de acordo com o assunto abordado, ocasionando assim uma menor abrangência de assuntos a serem pesquisados, de conteúdos a serem concentrados e de novas interpretações a serem elaboradas.
 
@@ -248,7 +551,7 @@ Ao longo do desenvolvimento dos tutoriais, efetuou-se esforços para pensar e co
 
 Nos tutorias de cinemática por exemplo, após o estudante ter contato com os scripts que fazem seus motores andarem para frente, foi proposto como desafio que o estudante fizesse com que os motores fizessem o robô dar uma meia-volta. Esses desafios foram pensados de uma forma que caso o estudante tenha obtido um certo nível básico de proficiência a partir das análises dos programas modelos, ele conseguiria realizá-los com uma simples mudança no código.
 
-Um outro exemplo desses desafios é o desafio contido na parte introdutória de visão computacional. Foi apresentado para o aluno como seria um script para isolamento e segmentação da cor vermelha em uma imagem, e o desafio proposto foi que ele implementasse o mesmo para a cor azul.
+Um outro exemplo desses desafios é o desafio contido na parte introdutória de visão computacional. Foi apresentado para o aluno como seria um script para isolamento e segmentação da cor vermelha em uma imagem \ref{fig:vermelho}, e o desafio proposto foi que ele implementasse o mesmo para a cor azul.
 
 O único desafio que teve um tratamento separado, com uma página própria e explicações próprias foi o desafio final, que devido ao fato de englobar todos os conceitos abordados anteriormente, apresenta uma maior complexidade.
 
@@ -268,4 +571,14 @@ Essa complexidade vai além dos conceitos apresentados, mas também por todos os
 	\source{Autores, 2019}
 \end{figure}
 
+A figura \ref{fig:def_fin} apresenta como os componentes do kit se comunicam entre si. Inicialmente, a câmera “enxerga” o aruco e o OpenCV segmenta e identifica o aruco. Após a identificação, o algoritmo envia uma mensagem para o ROS com a informação que ali existe um aruco de ID x. Caso o ID do aruco seja o estipulado para que o robô tenha que ir para frente, o ROS envia uma mensagem para o servo-motor Dynamixel para ir para tal posição. Por sua vez, o dynamixel assim que chegar para a posição determinada, enviará uma mensagem para o ROS com a informação da posição.
 
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.75, angle=0]{Figures/desafio_final.png}
+	\caption{Diagrama do desafio final}
+	\label{fig:def_fin}
+	\source{Autores, 2019}
+\end{figure}
+
+O que é interessante descrever sobre este último desafio é que a partir da apresentação e o comprimento dele, o aluno tem capacidade suficiente para começar a aprender e assimilar novos conteúdos da área da robótica por si só. Isso pode ser afirmado pois por trás do problema proposto há diversos conceitos, que se assimilados, propicia ao estudante conteúdo suficiente para adentrar outras áreas da robótica. 
