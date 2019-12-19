@@ -1,4 +1,4 @@
-% !TeX spellcheck = pt_BR
+% !TeX spellcheck = <none>
 \chapter{Desenvolvimento}
 \label{chap:desen_test}
 \begin{flushright}
@@ -59,48 +59,49 @@ programação de atuação dos servos para movimentação diferencial simples, a
 Implementação de uma integração da movimentação com a visão computacional.
 
 \subsubsection{Metodologia de ensino}
-
+A partir da análise das metodologias de ensino préviamente apresentadas, a equipe pensou em uma proposta metodológica que contivesse dois pilares filosofico, teoria e prática. A figura \ref{img:rep_metod} representa graficamente a proposta metodologica, evidenciando como os pilares se relacionam.
 \begin{figure}[h!]                                                
 	\centering        
-	\includegraphics[width=0.5\textwidth]{Rep_graf_metodo.png}            
+	\includegraphics[width=0.8\textwidth]{fluxograma_metodo.png}            
 	\caption{Representação Gráfica da Metodologia}        
 	\label{img:rep_metod}    
 	\source{Autores, 2019}        
 \end{figure}
-
-A proposta de desenvolvimento será baseada na figura~\ref{img:rep_metod} abaixo, que apresenta os macro itens envolvidos, assim como uma exemplificação de como essas informações serão apresentadas ao estudante.
-
-Estes macro itens são subdivididos da seguinte maneira: Na parte teórica serão apresentados ao estudante conceitos básicos de robótica, baseados nas principais bibliografias e documentos que são normalmente utilizados pela comunidade de robótica, e já na parte prática, o aluno contará com um kit físico para ajudar a absorção dos conteúdos apresentados.
+Os dois pilares filosoficos são subdivididos da seguinte maneira: Na parte teórica serão apresentados ao estudante conceitos básicos de robótica, baseados nas principais bibliografias e documentos que são normalmente utilizados pela comunidade de robótica.
 
 Do ponto de vista teórico, um exemplo do que será disponibilizado são os tutoriais do Framework ROS (do inglês Robot Operating System), que são elaborados pela própria comunidade do ROS. Todavia, não existem versões escritas em português, ou em uma linguagem que se preocupe em ser simplificada, o que dificulta o acesso à essas informações. Assim, a proposta é de utilizar estes tutoriais como inspiração e referência de conteúdo para produção de material escrito em linguagem mais acessível e em português.
 
-Além da produção de tutoriais, há ainda a proposta de apresentar scripts modelo, escritos em python, que servirão como base para explicações de conceitos
-de programação. O foco destes, será de mostrar aos alunos como utilizar métodos e funções próprias do framework. Estes scripts estarão envolvidos diretamente com outro macro item, que é o aprendizado prático. A parte prática tem como foco o estudo e a alteração dos scripts, proporcionando assim o desenvolvimento do estudante em programação.
+Além da produção de tutoriais, há ainda a proposta de apresentar scripts modelo, escritos em python, que servirão como base para explicações dos conceitos. O foco destes, será mostrar aos alunos como utilizar métodos e funções próprias do framework. Estes scripts estarão envolvidos diretamente com outro item, que é o aprendizado prático. A parte prática tem como foco o estudo e a alteração dos scripts, proporcionando assim o desenvolvimento do estudante em programação.
 
-Cada script modelo estará atrelado a um desafio. Para que o estudante solucione estes desafios, a proposta é que ele leia, interprete e altere o programa
-para realizar uma tarefa específica que vai um pouco além da apresentada pelo script original.
+Cada script modelo estará atrelado a um desafio. Para que o estudante solucione estes desafios, a proposta é que ele leia, interprete e altere o programa para realizar uma tarefa específica que vai um pouco além da apresentada pelo script original.
 
-Visando dar forma e visual à conceitos muitas vezes abstratos, o que é interessante na abordagem, é que, atrelado a essas alterações haverão dispositivos
-reais para demonstrar se houve ou não êxito. Alguns exemplos de dispositivos com os quais os estudantes poderão interagir são servomotores e uma câmera, o que
+Visando dar forma e visual à conceitos muitas vezes abstratos, o que é interessante na abordagem, é que, atrelado a essas alterações haverão dispositivos reais para demonstrar se houve ou não êxito. Alguns exemplos de dispositivos com os quais os estudantes poderão interagir são servomotores e uma câmera, o que
 facilitará uma absorção dos conceitos apresentados.
-Para alcançar estes objetivos de aliar as macro áreas, o estudante terá contato também com uma plataforma online, o GitHub, onde encontrará todos os tutoriais e materiais complementares desenvolvidos.
 
-Paralelo à isso, na parte física, o estudante também terá um kit físico para montagem gradual de um robô com movimentação diferencial. Esta montagem será modular e será regida pelo seu andamento nos tutoriais. O quadro~\ref{tab:quad01} apresenta os componentes presentes no kit.
+O pilar filosofico da teoria é suportado pela plataforma Github, mais precisamente as páginas contidas nela. Esta plataforma é considerada  \textit{Opensource}, ou seja, toda informação disposta nela é aberta para o público, cumprindo assim o desejo da equipe de democratizar o conhecimento. Ao todo existem 24 páginas com conteúdos diversos nesta plataforma, além de 12 programas modelos.
 
-% Please add the following required packages to your document preamble:
-% \usepackage{graphicx}
-\begin{table}[]
+Paralelo à isso, na parte física, o estudante também terá um kit físico para montagem gradual de um robô com movimentação diferencial. Esta montagem será modular e será regida pelo seu andamento nos tutoriais. O quadro \ref{Tabela1} apresenta os componentes presentes no kit.
+
+\begin{table}
 	\centering
-	\caption{Relação dos Componentes Presentes no Kit Físico.}
-	\label{tab:quad01}
-	\resizebox{\textwidth}{!}{%
-		\begin{tabular}{cccccccc}
-			\textbf{Componentes} & \begin{tabular}[c]{@{}c@{}}Raspberry \\ Pi 3b\end{tabular} & \begin{tabular}[c]{@{}c@{}}Dynamixel \\ MX-28\end{tabular} & \begin{tabular}[c]{@{}c@{}}Câmera \\ RGB\end{tabular} & \begin{tabular}[c]{@{}c@{}}Rodas \\ Emborrachadas\end{tabular} & \begin{tabular}[c]{@{}c@{}}Roda \\ de Apoio\end{tabular} & \begin{tabular}[c]{@{}c@{}}Cabos \\ e Conexões\end{tabular} & Bateria \\
-			\textbf{Quantidade}  & 1                                                            & 2                                                             & 1                                                        & 2                                                                 & 1                                                           & x                                                              & 1      
-		\end{tabular}%
-	}
+	\begin{small}
+		\caption{Componentes constituintes do kit fisíco.} \label{Tabela1}
+		\begin{tabular}{cc}
+			\hline
+			Componentes              & Quantidade\\
+			\hline
+			Raspberry Pi3B              & 1 \\
+			Dynamixel MX-28                & 2 \\
+			Câmera RGB                    & 1 \\
+			Rodas emborrachadas            & 2 \\
+			Roda boba                    & 1 \\
+			Cabos e conexões            & x \\
+			Bateria                     & 1 \\
+			Conversores DCDC            & 2 \\
+			\hline
+		\end{tabular}
+	\end{small}
 \end{table}
-
 A escolha da Raspberry Pi 3.0B se deve por conta da alta disponibilidade no mercado, por apresentar um custo baixo se comparado com outros computadores que serviriam para a mesma finalidade, e principalmente por apresentar poder computacional suficiente para o funcionamento do ROS e das bibliotecas de processamento de imagens que serão utilizadas.
 
 Na Raspberry Pi será utilizado o sistema operacional Raspbian por ser o mais otimizado para a plataforma, por ser derivado de um sistema Linux, e por funcionar
@@ -112,8 +113,17 @@ Serão apresentados os servomotores Dynamixel, por serem amplamente utilizados e
 
 A câmera RGB será utilizada para facilitar a introdução de conceitos de visão computacional e suas ferramentas, como a biblioteca do OpenCV (do inglês, Open Computer Vision). Haverão scripts modelo apresentando a integração entre ROS e OpenCV, além da proposição de desafios utilizando conceitos básicos de visão computacional.
 
-Ao final deste módulo, será apresentado para o estudante o desafio final do kit, que se tratará de uma integração dos conhecimentos apresentados previamente.
+A figura \ref{img:flu_metod} apresenta o fluxograma da proposta de aprendizagem de robótica feita pela equipe. Ela representa como o aluno irá aprender a robótica utilizando os materiais dispostos, de forma modular e progressiva. 
+Este quesito de ser progressivo e modular é representado nos passos da figura \ref{img:flu_metod}, já que inicialmente o aluno irá aprender os conceitos básicos dispostos na wiki. Cada conceito básico tem um programa modelo para exemplificar e demonstrar como este conceito é aplicado na robótica. Após a apresentação do programa modelo, é proposto um desafio ao aluno envolvendo o conceito abordado. Para o comprimento deste desafio, o estudante necessita montar uma parte do kit físico a fim de propiciar a parte prática e o contato com o hardware. Com a teoria que foi apresentada anteriormente, programa modelo e pesquisa em textos base, o aluno será capaz de solucionar o desafio proposto anteriormente. Com a assimilação do conteúdo, o usuário será apto para passar para um conceito mais complexo da área da robótica.
 
+
+\begin{figure}[h!]                                                
+	\centering        
+	\includegraphics[width=0.8\textwidth]{fluxograma_met.png}            
+	\caption{Fluxograma da Metodologia}        
+	\label{img:flu_metod}    
+	\source{Autores, 2019}        
+\end{figure}
 
 \subsection{Planejamento}
 
@@ -239,28 +249,7 @@ Com todos os componentes em mãos, o estudante pode proceder para a montagem aco
 
 \subsection{Raspberry e o SO}
 
-Como apresentado anteriormente, o kit físico irá conter os seguintes componentes:
-\begin{table}
-	\centering
-	\begin{small}
-		\caption{Componentes constituintes do kit fisíco.} \label{Tabela1}
-		\begin{tabular}{cc}
-			\hline
-			Componentes              & Quantidade\\
-			\hline
-			Raspberry Pi3B              & 1 \\
-			Dynamixel MX-28                & 2 \\
-			Câmera RGB                    & 1 \\
-			Rodas emborrachadas            & 2 \\
-			Roda boba                    & 1 \\
-			Cabos e conexões            & x \\
-			Bateria                     & 1 \\
-			\hline
-		\end{tabular}
-	\end{small}
-\end{table}
-
-Muito dos componentes apresentados na \ref{Tabela1} são comumente utilizados, tendo uma alta qualidade atrelada, porém, somente quando atreladas à um uso comum. Como o projeto deste trabalho envolvia o uso de uma raspberry, tornou-se necessário o teste de integração entre os componentes e a raspberry.
+Muito dos componentes apresentados na tabela \ref{Tabela1} são comumente utilizados, tendo uma alta qualidade atrelada, porém, somente quando atreladas à um uso comum. Como o projeto deste trabalho envolvia o uso de uma raspberry, tornou-se necessário o teste de integração entre os componentes e a raspberry.
 
 Para a utilização dos ROS e OpenCV é preferível que estes estejam instalados em um SO (Sistema Operacional) com base em LINUX e com suporte ao ROS e OpenCV. Inicialmente foi testado o Ubuntu 16.04 server. Este SO é um derivativo do Ubuntu 16.04, a única diferença é que este não compõe a parte gráfica. Teoricamente, o Ubuntu server seria o Sistema operacional perfeito para a aplicação deste trabalho, por ser um sistema sólido, amplamente testado e que tem um dos melhores suportes às ferramentas utilizadas. Com tudo, há um pequeno problema na utilização dele, que não há suporte gráfico, ou seja, o aluno de cara teria um grande estranhamento de apenas utilizar o terminal para conseguir fazer as aplicações e desafios compostos no kit.
 
