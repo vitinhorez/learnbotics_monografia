@@ -23,8 +23,34 @@ Um outro ponto exigido pelo cliente foi a utilização de desafios ao longo do d
 Por fim o cliente pediu ainda que fossem abordados conceitos de ferramentas utilizadas profissionalmente, em específico o framework ROS, alguma linguagem de programação e alguma biblioteca para auxilio de aprendizado na questão da visão computacional.
 
 \subsection{Estudo do Estado da Arte}
-De posse dos requisitos do projeto, o próximo passo foi realizar uma pesquisa sobre as principais tecnologias e projetos já existentes, tanto no Brasil quanto no mundo que cumpriam parcialmente ou totalmente com os requisitos levantados. Os principais envolvidos encontrados foram 
+De posse dos requisitos do projeto, o passo seguinte foi a realização de uma pesquisa sobre as principais tecnologias e projetos já existentes no mercado, tanto nacional quanto internacional, que cumpriam parcialmente ou totalmente com os requisitos levantados. Neste estudo, os principais envolvidos encontrados foram: Modelix Robotics, Robocore, Nvidia, Mini Maker, Gogo Board, Lego e Vex Robotics.
+A figura 4.1 apresenta o levantamento das principais marcas do mercado, com suas referentes características quanto a metodologia de aprendizado, disponibilidade e presença de framework.
+
+\begin{figure}[h!]					
+	\centering
+	\caption{Características analisadas no SOTA}					
+	\includegraphics[width=1.0\textwidth]{figura1tabelametod.png}					
+	\label{img:sotabru}	
+	\source{Autores, 2019}		
+\end{figure}
+
+Fazendo uma análise quanto a hardware e especificações, observou-se que são opensource apenas os prejetos da Robocore, Gogo Board e Nvidia, sendo este último o único a apresentar framework.
+
+
 \subsection{Estudo das Metodologias de Ensino}
+	
+Através do estudo do estado da arte, foi notado que há uma certa variabilidade de métodos de ensino aplicados em cada benchmark, o que levantou a necessidade de um aprofundamento no campo pedagógico com estudo detalhado quanto aos principais movimentos, filosofias e metodologias de ensino aplicadas nos modelos de referência mundiais no ensino de robótica. 
+
+Primeiramente, foram analisadas as características do público alvo, com visão direcionada para as principais dificuldades e barreiras que as metodologias atuais de ensino possuem para se adequar ao perfil desse público. Notou-se que atualmente as pessoas acima de 12 anos estão o tempo inteiro conectadas à internet, recebem enorme quantidade de informações e não possuem mais paciência para aulas expositivas, havendo preferência por entretenimento através de games, redes sociais e outras ferramentas ao invés do estudo de ciências e tecnologias. Sendo assim, foi compreendido que é necessário transformar o aprendizado de robótica em algo divertido e prático, adequando-se ao perfil dinâmico dos alunos modernos e fazendo da robótica um meio prazeroso de entretenimento para atrair entusiastas.
+
+Foi, então, realizada uma busca das principais e mais eficientes didáticas de ensino aplicadas na aprendizagem de robótica ao redor do mundo. Decidiu-se incorporar ao projeto as seguintes filosofias, movimentos e metodologias com o intuito de adequar-se aos padrões mundiais de ensino de robótica e ao perfil dos alunos, facilitando e otimizando o aprendizado do público alvo:
+\begin{itemize}
+	\item aprendizagem baseada em projetos e colaboração: através de um kit modularizado com etapas progressivas que estimulam o empenho e a zona de desenvolvimento proximal para solucionar problemas e exploram o potencial de aprendizado enquanto o aluno busca conquistar o resultado final;
+	\item movimento STEM: por meio de linguagem simples, clara, interessante e objetiva, de design atrativo e desafios divertidos que desmistificam tabus quanto às dificuldades da área de robótica e atraem a atenção do público;
+	\item metodologia Do-It-Yourself aliada à filosofia Maker: estimulando e permitindo que o aluno faça o próprio projeto sem a necessidade de ambiente acadêmico/escolar por meio de peças disponíveis para produção por manufatura aditiva em impressoras 3d, conteúdo opensource e hardwares genéricos.
+\end{itemize}
+
+Sendo definidas as metodologias a serem aplicadas, tornou-se possível entender e adotar uma série de cuidados necessários para adequar o desenvolvimento do projeto às necessidades do público alvo.
 
 \section{Projeto Detalhado}
 \subsection{Definição}
